@@ -14,32 +14,50 @@ class ProfilePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
-        //tableView.dataSource = self
+        tableView.dataSource = self
  
     }
-
     
 }
+
+
 
 
 extension ProfilePageViewController: UITableViewDelegate {
     
+    // 셀 높이 조절
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+        return 60.0
+    }
+    
+    // 셀 누를때
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     
 }
 
-//extension ProfilePageViewController: UITableViewDataSource {
+extension ProfilePageViewController: UITableViewDataSource {
    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        cell.icon.image = list[indexPath.row].icon
+        cell.label.text = list[indexPath.row].title
+        
+        let iconImage = list[indexPath.row].icon
+            cell.icon.image = iconImage.withTintColor(.black, renderingMode: .alwaysOriginal)
+        
+        
+        return cell
+    }
+
     
     
-//}
+}
 
 
 

@@ -13,5 +13,9 @@ class ProfilePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("마이페이지")
+        print("두번째테스트")
     }
+    
+    
+    
 }

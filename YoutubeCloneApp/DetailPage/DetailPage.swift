@@ -10,7 +10,7 @@ import UIKit
 class DetailPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("first test") //
+        print("first test") ////
     }
 }
 

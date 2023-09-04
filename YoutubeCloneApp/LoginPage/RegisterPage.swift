@@ -8,37 +8,45 @@
 import UIKit
 
 class RegisterPage: UIViewController {
+    
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var checkPwdTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        // 네비게이션 바 생성
-//        let navigationBar = UINavigationBar()
-//        view.addSubview(navigationBar)
-//
-//        // Safe Area Layout Guide를 사용하여 네비게이션 바를 설정
-//        if #available(iOS 8.0, *) {
-//            let guide = view.safeAreaLayoutGuide
-//            navigationBar.translatesAutoresizingMaskIntoConstraints = false
-//            NSLayoutConstraint.activate([
-//                navigationBar.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-//                navigationBar.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-//                navigationBar.topAnchor.constraint(equalTo: guide.topAnchor),
-//                navigationBar.heightAnchor.constraint(equalToConstant: 44) // 네비게이션 바의 높이 설정
-//            ])
-//        }
-//        navigationBar.barTintColor = UIColor.white
         
-//
-//        // 커스텀 네비게이션 아이템 생성
-//        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonTapped))
-//        let navigationItem = UINavigationItem()
-//        navigationItem.leftBarButtonItem = backButton
-//
-//        // 네비게이션 바에 아이템 설정
-//        navigationBar.items = [navigationItem]
+        navigationItem.title = ""
+        
+        nameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        checkPwdTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
+        registerButton.isEnabled = false
+
     }
 
-//    @objc func backButtonTapped() {
-//        dismiss(animated: true, completion: nil)
-//    }
+    @objc func textFieldDidChange(){
+        if let nameText = nameTextField.text,
+           let emailText = emailTextField.text,
+           let passwordText = passwordTextField.text,
+           let checkPwdText = checkPwdTextField.text {
+            registerButton.isEnabled = !nameText.isEmpty && !emailText.isEmpty && !passwordText.isEmpty && !checkPwdText.isEmpty
+        } else {
+            registerButton.isHidden = false
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            if self.registerButton.isEnabled {
+                self.registerButton.backgroundColor = UIColor.red
+            } else {
+                self.registerButton.backgroundColor = UIColor.lightGray
+            }
+        }
+    }
+
 }

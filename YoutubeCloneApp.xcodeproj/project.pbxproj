@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB6FCB932AA5E2900099DA49 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FCB922AA5E2900099DA49 /* Color+Extension.swift */; };
 		FBBFD5312AA56D9F00F3757C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFD5302AA56D9F00F3757C /* AppDelegate.swift */; };
 		FBBFD5332AA56D9F00F3757C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFD5322AA56D9F00F3757C /* SceneDelegate.swift */; };
 		FBBFD5352AA56D9F00F3757C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFD5342AA56D9F00F3757C /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB6FCB922AA5E2900099DA49 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		FBBFD52D2AA56D9F00F3757C /* YoutubeCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBFD5302AA56D9F00F3757C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBBFD5322AA56D9F00F3757C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				FBBFD5302AA56D9F00F3757C /* AppDelegate.swift */,
 				FBBFD5322AA56D9F00F3757C /* SceneDelegate.swift */,
 				FBBFD5342AA56D9F00F3757C /* ViewController.swift */,
+				FB6FCB922AA5E2900099DA49 /* Color+Extension.swift */,
 				FBBFD5392AA56D9F00F3757C /* Assets.xcassets */,
 				FBBFD53B2AA56D9F00F3757C /* LaunchScreen.storyboard */,
 				FBBFD53E2AA56D9F00F3757C /* Info.plist */,
@@ -205,6 +208,7 @@
 				FBC0CF702AA57839006E3197 /* LoginPage.swift in Sources */,
 				FBC0CF662AA57471006E3197 /* DetailPage.swift in Sources */,
 				FBBFD5332AA56D9F00F3757C /* SceneDelegate.swift in Sources */,
+				FB6FCB932AA5E2900099DA49 /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

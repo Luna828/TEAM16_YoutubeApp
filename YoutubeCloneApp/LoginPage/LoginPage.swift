@@ -14,6 +14,10 @@ class LoginPageViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var loginButton: UIButton!
+    @IBOutlet var rememberButton: UIButton!
+    
+    var isChecked = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,10 +62,23 @@ class LoginPageViewController: UIViewController {
     
     @IBAction func registerButton(_ sender: UIButton) {
         if let registerVC = storyboard?.instantiateViewController(withIdentifier: "RegisterPage") {
-            
             navigationController?.pushViewController(registerVC, animated: true)
-            //registerVC.modalPresentationStyle = .fullScreen
-            //present(registerVC, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func rememberEmail(_ sender: Any) {
+        
+        isChecked.toggle()
+        print(isChecked)
+        
+        if isChecked {
+            // 버튼의 이미지를 체크된 이미지로 변경
+            let checkedImage = UIImage(systemName: "checkmark.rectangle.portrait.fill")
+            rememberButton.setImage(checkedImage, for: .normal)
+        } else {
+            // 버튼의 이미지를 체크되지 않은 이미지로 변경
+            let uncheckedImage = UIImage(systemName: "checkmark.rectangle.portrait")
+            rememberButton.setImage(uncheckedImage, for: .normal)
         }
     }
 }

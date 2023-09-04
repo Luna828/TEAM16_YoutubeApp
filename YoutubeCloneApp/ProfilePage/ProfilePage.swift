@@ -9,4 +9,9 @@ import UIKit
 
 class ProfilePageViewController: UIViewController {
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("마이페이지")
+    }
 }

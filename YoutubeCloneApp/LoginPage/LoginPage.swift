@@ -15,7 +15,6 @@ class LoginPageViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var loginButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,5 +56,12 @@ class LoginPageViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: UIButton) {}
     
-    @IBAction func registerButton(_ sender: UIButton) {}
+    @IBAction func registerButton(_ sender: UIButton) {
+        if let registerVC = storyboard?.instantiateViewController(withIdentifier: "RegisterPage") {
+            
+            navigationController?.pushViewController(registerVC, animated: true)
+            //registerVC.modalPresentationStyle = .fullScreen
+            //present(registerVC, animated: true, completion: nil)
+        }
+    }
 }

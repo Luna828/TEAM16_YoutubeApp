@@ -9,14 +9,5 @@ import UIKit
 
 class MainPageViewController: UIViewController {
     
-// commit test
-    
-// second commit and pull test
-    
-    // third commit and pull test
-    
-    // fourth commit and pull test
-    
-    // fifth commit and pull test
-    
+
 }

@@ -24,3 +24,4 @@ var list = [ProfileModel(icon: UIImage(systemName: "person.crop.square")!, title
             ProfileModel(icon: UIImage(systemName: "gearshape")!, title: "설정"),
             ProfileModel(icon: UIImage(systemName: "questionmark.circle")!, title: "고객센터"),
 ]
+

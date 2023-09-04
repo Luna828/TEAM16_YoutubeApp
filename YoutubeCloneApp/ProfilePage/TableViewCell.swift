@@ -9,7 +9,6 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var label: UILabel!
     

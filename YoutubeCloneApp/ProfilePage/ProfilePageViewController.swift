@@ -7,23 +7,31 @@
 
 import UIKit
 
+protocol PerformSegue {
+    func performSegue()
+    func sendName(name: String)
+}
+
 class ProfilePageViewController: UIViewController {
  
     @IBOutlet weak var tableView: UITableView!
-    var name: String = "한솔"
+    var name = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        if let userName = UserDefaults.standard.string(forKey: "userName") {
+                   name = userName
+               }
+        
  
     }
     
 }
 
-
-
-
+// MARK: -UITableViewDelegate
 extension ProfilePageViewController: UITableViewDelegate {
     
     // 셀 높이 조절
@@ -31,7 +39,7 @@ extension ProfilePageViewController: UITableViewDelegate {
         if indexPath.row == 0 {
             return 120.0
         } else {
-            return 70.0
+            return 65.0
         }
     }
     
@@ -40,11 +48,12 @@ extension ProfilePageViewController: UITableViewDelegate {
         if indexPath.row != 0 {
            tableView.deselectRow(at: indexPath, animated: true)
         }
-        
     }
     
 }
 
+
+// MARK: -UITableViewDataSource
 extension ProfilePageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,34 +61,66 @@ extension ProfilePageViewController: UITableViewDataSource {
     }
     
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell", for: indexPath) as! HeaderTableViewCell
+            cell.delegate = self
             cell.nameLabel.text = name
-
+            
             if let lastCharacter = name.last {
-                cell.viewName.text = String(lastCharacter)
+               cell.viewName.text = String(lastCharacter)
             } else {
-                cell.viewName.text = ""
+               cell.viewName.text = ""
             }
             
             return cell
-
+            
         } else {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
             cell.icon.image = list[indexPath.row].icon
             cell.label.text = list[indexPath.row].title
             
-            let iconImage = list[indexPath.row].icon
-            cell.icon.image = iconImage.withTintColor(.black, renderingMode: .alwaysOriginal)
-            
-            
+            if list[indexPath.row].title == "내 premium 혜택" ||
+               list[indexPath.row].title == "Youtube 스튜디오" ||
+               list[indexPath.row].title == "Youtube Music"{
+                cell.icon.image = list[indexPath.row].icon.withTintColor(.red, renderingMode: .alwaysOriginal)
+            } else {
+                cell.icon.image = list[indexPath.row].icon.withTintColor(.black, renderingMode: .alwaysOriginal)
+            }
             return cell
         }
-        
-        
-        
     }
     
+}
+
+
+// MARK: -PerformSegue
+extension ProfilePageViewController: PerformSegue {
+    
+    func performSegue() {
+        self.performSegue(withIdentifier: "goEdit", sender: self)
+       }
+    
+    
+    func sendName(name: String) {
+              let indexPath = IndexPath(row: 0, section: 0)
+              if let headerCell = tableView.cellForRow(at: indexPath) as? HeaderTableViewCell {
+                  headerCell.nameLabel.text = name
+                  if let lastCharacter = name.last {
+                      headerCell.viewName.text = String(lastCharacter)
+                  } else {
+                      headerCell.viewName.text = ""
+                  }
+              }
+          }
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goEdit" {
+            let nextVC = segue.destination as! EditViewController
+            nextVC.delegate = self
+        }
+    }
+
 }

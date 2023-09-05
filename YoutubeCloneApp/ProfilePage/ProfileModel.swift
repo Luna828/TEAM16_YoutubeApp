@@ -23,5 +23,6 @@ var list = [ProfileModel(icon: UIImage(systemName: "person.crop.square")!, title
             ProfileModel(icon: UIImage(systemName: "bolt.shield")!, title: "YouTube의 내 데이터"),
             ProfileModel(icon: UIImage(systemName: "gearshape")!, title: "설정"),
             ProfileModel(icon: UIImage(systemName: "questionmark.circle")!, title: "고객센터"),
-]
+            ProfileModel(icon: UIImage(systemName: "play.rectangle.fill")!, title: "Youtube 스튜디오"),
+            ProfileModel(icon: UIImage(systemName: "music.mic.circle.fill")!, title: "Youtube Music")]
 

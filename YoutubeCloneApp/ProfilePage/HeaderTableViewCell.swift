@@ -7,12 +7,13 @@
 
 import UIKit
 
-class HeaderTableViewCell:
-    UITableViewCell {
+class HeaderTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lableView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var viewName: UILabel!
+    
+    var delegate: PerformSegue?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +29,7 @@ class HeaderTableViewCell:
 
     
     @IBAction func editButtonTapped(_ sender: UIButton) {
+        delegate?.performSegue()
     }
     
     

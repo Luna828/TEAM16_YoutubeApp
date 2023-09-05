@@ -120,6 +120,26 @@
                                             <outlet property="label" destination="ORn-D1-IyB" id="B2C-zy-ynl"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bottomCell" rowHeight="97" id="ghE-2e-FLK" customClass="BottomTableViewCell" customModule="YoutubeCloneApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="244" width="393" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghE-2e-FLK" id="d3g-RN-yvs">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보처리방침 • 서비스 약관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CW-nR-KaY">
+                                                    <rect key="frame" x="90.666666666666686" y="38.333333333333336" width="212" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9CW-nR-KaY" firstAttribute="centerX" secondItem="d3g-RN-yvs" secondAttribute="centerX" id="oTn-uh-ldI"/>
+                                                <constraint firstItem="9CW-nR-KaY" firstAttribute="centerY" secondItem="d3g-RN-yvs" secondAttribute="centerY" id="rO6-Bp-xFH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

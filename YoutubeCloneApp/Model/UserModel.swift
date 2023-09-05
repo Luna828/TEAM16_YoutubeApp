@@ -8,7 +8,7 @@
 import Foundation
 
 struct UserModel {
-    var name = "이름"
-    var email = ""
-    var password = ""
+    var name: String
+    var email: String
+    var password: String
 }

@@ -16,8 +16,23 @@ class RegisterPage: UIViewController {
     let showPasswordButton = UIButton(type: .custom)
     let showCheckPasswordButton = UIButton(type: .custom)
     
+    
+    @IBAction func registerButton(_ sender: Any) {
+        if let name = nameTextField.text,
+               let email = emailTextField.text,
+               let password = passwordTextField.text
+        {
+            let newUser = UserModel(name: name, email: email, password: password)
+            
+            UserDataManager.shared.addUser(newUser)
+            print("성공\(UserDataManager.shared.getUsers())")
+            navigationController?.popViewController(animated: true)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("성공\(UserDataManager.shared.getUsers())")
         registerButton.isEnabled = false //버튼이 눌리지 않게 비활성화
         navigationItem.title = ""
        

@@ -191,6 +191,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WUK-X7-H4T"/>
+                                    <action selector="registerButton:" destination="Wuf-Ms-9PL" eventType="touchUpInside" id="Gvf-mH-j89"/>
                                 </connections>
                             </button>
                         </subviews>

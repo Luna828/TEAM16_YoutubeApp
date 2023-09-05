@@ -14,23 +14,27 @@ class LoginPageViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var loginButton: UIButton!
+    @IBOutlet var rememberButton: UIButton!
     
+    var isChecked = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // 초기에 로그인 버튼 비활성화
         loginButton.isEnabled = false
-                
-        // emailTextField와 passwordTextField에 대한 editingChanged 이벤트 관찰자 추가
-        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
+        setupTextField()
     }
     
     @objc func textFieldDidChange() {
         // email과 password 텍스트 필드가 모두 비어 있지 않으면 로그인 버튼 활성화
-        if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
-            loginButton.isEnabled = !emailText.isEmpty && !passwordText.isEmpty
+        if let emailText = emailTextField.text,
+           let passwordText = passwordTextField.text
+        {
+            let isEmailValid = emailText.isValidEmail()
+            let isPasswordValid = passwordText.isValidPassword()
+            
+            loginButton.isEnabled = !emailText.isEmpty && !passwordText.isEmpty && isEmailValid && isPasswordValid
         } else {
             loginButton.isEnabled = false
         }
@@ -57,5 +61,40 @@ class LoginPageViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: UIButton) {}
     
-    @IBAction func registerButton(_ sender: UIButton) {}
+    @IBAction func registerButton(_ sender: UIButton) {
+        if let registerVC = storyboard?.instantiateViewController(withIdentifier: "RegisterPage") {
+            navigationController?.pushViewController(registerVC, animated: true)
+        }
+    }
+    
+    @IBAction func rememberEmail(_ sender: Any) {
+        isChecked.toggle()
+        print(isChecked)
+        
+        if isChecked {
+            // 버튼의 이미지를 체크된 이미지로 변경
+            let checkedImage = UIImage(systemName: "checkmark.rectangle.portrait.fill")
+            rememberButton.setImage(checkedImage, for: .normal)
+        } else {
+            // 버튼의 이미지를 체크되지 않은 이미지로 변경
+            let uncheckedImage = UIImage(systemName: "checkmark.rectangle.portrait")
+            rememberButton.setImage(uncheckedImage, for: .normal)
+        }
+    }
+}
+
+extension LoginPageViewController {
+    private func setupTextField() {
+        emailTextField.layer.borderColor = UIColor.darkGray.cgColor
+        emailTextField.layer.borderWidth = 1.0
+        emailTextField.layer.cornerRadius = 10.0
+        passwordTextField.layer.borderColor = UIColor.darkGray.cgColor
+        passwordTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.cornerRadius = 10.0
+        passwordTextField.isSecureTextEntry = true
+                
+        // emailTextField와 passwordTextField에 대한 editingChanged 이벤트 관찰자 추가
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
 }

@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3b0-EA-PTz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ehf-Ug-yE0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="4fb-hE-ZBc">
+            <objects>
+                <navigationController id="ehf-Ug-yE0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gFV-m7-ZhV">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3b0-EA-PTz" kind="relationship" relationship="rootViewController" id="Nee-A7-h8W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42x-ZE-frF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1585" y="-135"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zJ1-wm-TSo">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3b0-EA-PTz" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZnQ-6x-vvO"/>
                     <tabBar key="tabBar" tag="-1" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wuw-6x-w7T">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -31,7 +48,7 @@
         <scene sceneID="0ha-do-mQ4">
             <objects>
                 <viewControllerPlaceholder storyboardName="MainPage" referencedIdentifier="MainPage" id="ygc-N2-6zL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="main" id="KPZ-5c-7Ja"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="main" id="KPZ-5c-7Ja"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFw-dz-rZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +58,7 @@
         <scene sceneID="CFS-er-84x">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="DetailPage" storyboardName="DetailPage" referencedIdentifier="DetailPage" id="hbB-m4-wML" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="detail" id="bnN-6p-mDU"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="detail" landscapeImage="ON" id="bnN-6p-mDU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6XZ-KT-37M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,11 +68,14 @@
         <scene sceneID="FbL-CT-Xb4">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="ProfilePage" storyboardName="ProfilePage" referencedIdentifier="ProfilePage" id="yr6-7K-Xk6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="profile" id="RwO-UW-RVP"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="profile" largeContentSizeImage="ON" id="RwO-UW-RVP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3U-sI-CnW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="183" y="15"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ON" width="85" height="18.666666030883789"/>
+    </resources>
 </document>

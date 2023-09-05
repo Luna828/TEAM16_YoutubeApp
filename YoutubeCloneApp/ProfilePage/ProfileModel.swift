@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 struct ProfileModel {
     var icon: UIImage
     var title: String

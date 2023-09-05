@@ -15,7 +15,7 @@ protocol PerformSegue {
 class ProfilePageViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var name = "이름"
+    var userModel = UserModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class ProfilePageViewController: UIViewController {
         super.viewWillAppear(false)
         
         if let userName = UserDefaults.standard.string(forKey: "userName") {
-            name = userName
+            userModel.name = userName
         }
     }
     
@@ -69,9 +69,9 @@ extension ProfilePageViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell", for: indexPath) as! HeaderTableViewCell
             cell.delegate = self
-            cell.nameLabel.text = name
+            cell.nameLabel.text = userModel.name
             
-            if let lastCharacter = name.last {
+            if let lastCharacter = userModel.name.last {
                 cell.viewName.text = String(lastCharacter)
             } else {
                 cell.viewName.text = ""

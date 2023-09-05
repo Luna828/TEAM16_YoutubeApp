@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UserDataManager.shared.addUser(UserModel(name: "이름", email: "", password: ""))
         // Override point for customization after application launch.
         return true
     }

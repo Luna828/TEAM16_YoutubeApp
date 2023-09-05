@@ -60,7 +60,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcc-aZ-Q6o">
-                                                    <rect key="frame" x="95" y="69" width="83" height="34"/>
+                                                    <rect key="frame" x="95" y="72" width="83" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="프로필 수정"/>
@@ -70,7 +70,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Pcc-aZ-Q6o" firstAttribute="top" secondItem="N7i-ca-oiA" secondAttribute="bottom" constant="2" id="L4a-2d-neU"/>
+                                                <constraint firstItem="Pcc-aZ-Q6o" firstAttribute="top" secondItem="N7i-ca-oiA" secondAttribute="bottom" constant="5" id="L4a-2d-neU"/>
                                                 <constraint firstItem="bG8-31-iUc" firstAttribute="top" secondItem="8R4-oz-uuz" secondAttribute="top" constant="40" id="Vjd-AU-zVX"/>
                                                 <constraint firstAttribute="trailing" secondItem="yD0-rv-d59" secondAttribute="trailing" constant="20" id="iUD-Tf-vjF"/>
                                                 <constraint firstItem="yD0-rv-d59" firstAttribute="top" secondItem="8R4-oz-uuz" secondAttribute="top" constant="35" id="iUT-bN-bli"/>
@@ -101,7 +101,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORn-D1-IyB">
-                                                    <rect key="frame" x="80" y="38" width="42" height="21"/>
+                                                    <rect key="frame" x="70" y="38" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -110,7 +110,7 @@
                                             <constraints>
                                                 <constraint firstItem="fw7-hB-63R" firstAttribute="leading" secondItem="cKL-2f-W8l" secondAttribute="leading" constant="20" id="PUF-Hb-So0"/>
                                                 <constraint firstAttribute="bottom" secondItem="fw7-hB-63R" secondAttribute="bottom" constant="5" id="ScK-au-zXB"/>
-                                                <constraint firstItem="ORn-D1-IyB" firstAttribute="leading" secondItem="fw7-hB-63R" secondAttribute="trailing" constant="30" id="Sf4-Ne-wHd"/>
+                                                <constraint firstItem="ORn-D1-IyB" firstAttribute="leading" secondItem="fw7-hB-63R" secondAttribute="trailing" constant="20" id="Sf4-Ne-wHd"/>
                                                 <constraint firstItem="ORn-D1-IyB" firstAttribute="centerY" secondItem="cKL-2f-W8l" secondAttribute="centerY" id="bOp-bq-EmC"/>
                                                 <constraint firstItem="fw7-hB-63R" firstAttribute="top" secondItem="cKL-2f-W8l" secondAttribute="top" constant="5" id="oba-YT-Fmf"/>
                                             </constraints>
@@ -119,6 +119,26 @@
                                             <outlet property="icon" destination="fw7-hB-63R" id="apO-IV-WKI"/>
                                             <outlet property="label" destination="ORn-D1-IyB" id="B2C-zy-ynl"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bottomCell" rowHeight="97" id="ghE-2e-FLK" customClass="BottomTableViewCell" customModule="YoutubeCloneApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="244" width="393" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghE-2e-FLK" id="d3g-RN-yvs">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보처리방침 • 서비스 약관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CW-nR-KaY">
+                                                    <rect key="frame" x="102.66666666666667" y="39.666666666666664" width="187.66666666666663" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9CW-nR-KaY" firstAttribute="centerX" secondItem="d3g-RN-yvs" secondAttribute="centerX" id="oTn-uh-ldI"/>
+                                                <constraint firstItem="9CW-nR-KaY" firstAttribute="centerY" secondItem="d3g-RN-yvs" secondAttribute="centerY" id="rO6-Bp-xFH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -197,6 +217,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

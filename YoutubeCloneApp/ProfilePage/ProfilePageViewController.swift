@@ -15,7 +15,7 @@ protocol PerformSegue {
 class ProfilePageViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var userModel = UserModel()
+    var userModel: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,25 +25,31 @@ class ProfilePageViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(false)
+        super.viewWillAppear(animated)
         
-        if let userName = UserDefaults.standard.string(forKey: "userName") {
-            userModel.name = userName
+        let users = UserDataManager.shared.getUsers()
+  
+        if let firstUser = users.first{
+            userModel = firstUser
+            tableView.reloadData()
         }
     }
-    
-}
+
+      
+  }
 
 
 // MARK: -UITableViewDelegate
 extension ProfilePageViewController: UITableViewDelegate {
     
     // 셀 높이 조절
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 120.0
+        } else if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
+            return 40.0
         } else {
-            return 65.0
+            return 70.0
         }
     }
     
@@ -69,33 +75,36 @@ extension ProfilePageViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell", for: indexPath) as! HeaderTableViewCell
             cell.delegate = self
-            cell.nameLabel.text = userModel.name
+            cell.nameLabel.text = userModel?.name
             
-            if let lastCharacter = userModel.name.last {
+            if let lastCharacter = userModel?.name.last {
                 cell.viewName.text = String(lastCharacter)
             } else {
                 cell.viewName.text = ""
             }
             
             return cell
-            
+        } else if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "bottomCell", for: indexPath) as! BottomTableViewCell
+            return cell
+      
         } else {
-            
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
             cell.icon.image = list[indexPath.row].icon
             cell.label.text = list[indexPath.row].title
             
             if list[indexPath.row].title == "내 premium 혜택" ||
                 list[indexPath.row].title == "Youtube 스튜디오" ||
-                list[indexPath.row].title == "Youtube Music"{
+                list[indexPath.row].title == "Youtube Music" {
                 cell.icon.image = list[indexPath.row].icon.withTintColor(.red, renderingMode: .alwaysOriginal)
-            } else {
+           } else {
                 cell.icon.image = list[indexPath.row].icon.withTintColor(.black, renderingMode: .alwaysOriginal)
             }
             return cell
+      
         }
     }
-    
+
 }
 
 
@@ -122,6 +131,7 @@ extension ProfilePageViewController: PerformSegue {
         if segue.identifier == "goEdit" {
             let nextVC = segue.destination as! EditViewController
             nextVC.delegate = self
+            nextVC.name = userModel?.name
         }
     }
     

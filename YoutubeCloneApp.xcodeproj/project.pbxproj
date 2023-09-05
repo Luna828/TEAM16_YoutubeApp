@@ -13,6 +13,7 @@
 		67EE45F82AA6B89D00CFD729 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE45F72AA6B89D00CFD729 /* EditViewController.swift */; };
 		67EE45FB2AA6DFC500CFD729 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE45FA2AA6DFC500CFD729 /* UserModel.swift */; };
 		67EE45FD2AA6E01900CFD729 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE45FC2AA6E01900CFD729 /* UserDataManager.swift */; };
+		67EE45FF2AA708EF00CFD729 /* BottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE45FE2AA708EF00CFD729 /* BottomTableViewCell.swift */; };
 		FB6FCB932AA5E2900099DA49 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FCB922AA5E2900099DA49 /* Color+Extension.swift */; };
 		FB6FCB952AA623720099DA49 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FCB942AA623720099DA49 /* RegisterPage.swift */; };
 		FBBFD5312AA56D9F00F3757C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFD5302AA56D9F00F3757C /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 		67EE45F72AA6B89D00CFD729 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		67EE45FA2AA6DFC500CFD729 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		67EE45FC2AA6E01900CFD729 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		67EE45FE2AA708EF00CFD729 /* BottomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTableViewCell.swift; sourceTree = "<group>"; };
 		FB6FCB922AA5E2900099DA49 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		FB6FCB942AA623720099DA49 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
 		FBBFD52D2AA56D9F00F3757C /* YoutubeCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 				67EE45F72AA6B89D00CFD729 /* EditViewController.swift */,
 				6713028C2AA5F54B00C5B0EE /* TableViewCell.swift */,
 				67EE45F52AA6303600CFD729 /* HeaderTableViewCell.swift */,
+				67EE45FE2AA708EF00CFD729 /* BottomTableViewCell.swift */,
 			);
 			path = ProfilePage;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				6713028F2AA5F69E00C5B0EE /* ProfileModel.swift in Sources */,
 				FB6FCB952AA623720099DA49 /* RegisterPage.swift in Sources */,
 				FBC0CF682AA575AA006E3197 /* ProfilePageViewController.swift in Sources */,
+				67EE45FF2AA708EF00CFD729 /* BottomTableViewCell.swift in Sources */,
 				6713028D2AA5F54B00C5B0EE /* TableViewCell.swift in Sources */,
 				FBC0CF612AA57349006E3197 /* MainPageViewController.swift in Sources */,
 				FBC9AF212AA6C244000F25F0 /* String +.swift in Sources */,

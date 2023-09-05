@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct UserModel {
-    var name = "이름"
-    var email = ""
-    var password = ""
+struct UserModel: Codable {
+    var name: String
+    var email: String
+    var password: String
 }

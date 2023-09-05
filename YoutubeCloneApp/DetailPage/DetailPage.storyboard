@@ -195,6 +195,7 @@
                             <constraint firstItem="9bj-oZ-8MF" firstAttribute="leading" secondItem="I4b-mT-lQ4" secondAttribute="leading" id="uzQ-ET-gfP"/>
                         </constraints>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

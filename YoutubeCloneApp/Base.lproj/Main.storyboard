@@ -48,7 +48,7 @@
         <scene sceneID="0ha-do-mQ4">
             <objects>
                 <viewControllerPlaceholder storyboardName="MainPage" referencedIdentifier="MainPage" id="ygc-N2-6zL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="main" id="KPZ-5c-7Ja"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="main" id="KPZ-5c-7Ja"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFw-dz-rZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,7 +58,7 @@
         <scene sceneID="CFS-er-84x">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="DetailPage" storyboardName="DetailPage" referencedIdentifier="DetailPage" id="hbB-m4-wML" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="detail" id="bnN-6p-mDU"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="detail" landscapeImage="ON" id="bnN-6p-mDU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6XZ-KT-37M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,11 +68,14 @@
         <scene sceneID="FbL-CT-Xb4">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="ProfilePage" storyboardName="ProfilePage" referencedIdentifier="ProfilePage" id="yr6-7K-Xk6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="profile" id="RwO-UW-RVP"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="profile" largeContentSizeImage="ON" id="RwO-UW-RVP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3U-sI-CnW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="183" y="15"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ON" width="85" height="18.666666030883789"/>
+    </resources>
 </document>

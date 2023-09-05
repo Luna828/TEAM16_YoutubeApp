@@ -15,7 +15,7 @@ protocol PerformSegue {
 class ProfilePageViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var userModel = UserModel(name: "한솔", email: "", password: "")
+    var userModel: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +25,18 @@ class ProfilePageViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(false)
+        super.viewWillAppear(animated)
         
-        if let userName = UserDefaults.standard.string(forKey: "userName") {
-            userModel.name = userName
+        let users = UserDataManager.shared.getUsers()
+  
+        if let lastUser = users.last {
+            userModel = lastUser
+            tableView.reloadData()
         }
     }
-    
-}
+
+      
+  }
 
 
 // MARK: -UITableViewDelegate
@@ -71,9 +75,9 @@ extension ProfilePageViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell", for: indexPath) as! HeaderTableViewCell
             cell.delegate = self
-            cell.nameLabel.text = userModel.name
+            cell.nameLabel.text = userModel?.name
             
-            if let lastCharacter = userModel.name.last {
+            if let lastCharacter = userModel?.name.last {
                 cell.viewName.text = String(lastCharacter)
             } else {
                 cell.viewName.text = ""
@@ -103,6 +107,7 @@ extension ProfilePageViewController: UITableViewDataSource {
 
 }
 
+
 // MARK: -PerformSegue
 extension ProfilePageViewController: PerformSegue {
     
@@ -126,6 +131,7 @@ extension ProfilePageViewController: PerformSegue {
         if segue.identifier == "goEdit" {
             let nextVC = segue.destination as! EditViewController
             nextVC.delegate = self
+            nextVC.name = userModel?.name
         }
     }
     

@@ -16,11 +16,10 @@ class RegisterPage: UIViewController {
     let showPasswordButton = UIButton(type: .custom)
     let showCheckPasswordButton = UIButton(type: .custom)
     
-    
     @IBAction func registerButton(_ sender: Any) {
         if let name = nameTextField.text,
-               let email = emailTextField.text,
-               let password = passwordTextField.text
+           let email = emailTextField.text,
+           let password = passwordTextField.text
         {
             let newUser = UserModel(name: name, email: email, password: password)
             
@@ -33,10 +32,14 @@ class RegisterPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("성공\(UserDataManager.shared.getUsers())")
-        registerButton.isEnabled = false //버튼이 눌리지 않게 비활성화
+        registerButton.isEnabled = false // 버튼이 눌리지 않게 비활성화
         navigationItem.title = ""
        
         setupTextField()
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     @objc func textFieldDidChange() {
@@ -70,19 +73,21 @@ class RegisterPage: UIViewController {
         passwordTextField.isSecureTextEntry.toggle()
         updateShowPasswordButtonImage(isSecure: passwordTextField.isSecureTextEntry)
     }
+
     @objc func toggleCheckPasswordVisibility() {
         checkPwdTextField.isSecureTextEntry.toggle()
         updateShowCheckPwdButtonImage(isSecure: checkPwdTextField.isSecureTextEntry)
     }
     
     private func updateShowPasswordButtonImage(isSecure: Bool) {
-            let imageName = isSecure ? "eye" : "eye.fill"
-            showPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
-        }
+        let imageName = isSecure ? "eye" : "eye.fill"
+        showPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
+    }
+
     private func updateShowCheckPwdButtonImage(isSecure: Bool) {
-            let imageName = isSecure ? "eye" : "eye.fill"
-            showCheckPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
-        }
+        let imageName = isSecure ? "eye" : "eye.fill"
+        showCheckPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
+    }
 }
 
 extension RegisterPage {
@@ -102,7 +107,6 @@ extension RegisterPage {
         checkPwdTextField.layer.cornerRadius = 10.0
         checkPwdTextField.isSecureTextEntry = true
         
-       
         showPasswordButton.setImage(UIImage(systemName: "eye"), for: .normal)
         showPasswordButton.tintColor = UIColor.black
         showPasswordButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
@@ -126,5 +130,3 @@ extension RegisterPage {
         checkPwdTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
 }
-
-

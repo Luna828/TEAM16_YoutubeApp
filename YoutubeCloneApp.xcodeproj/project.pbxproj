@@ -119,12 +119,12 @@
 		FBC0CF692AA575B0006E3197 /* ProfilePage */ = {
 			isa = PBXGroup;
 			children = (
+				6713028E2AA5F69E00C5B0EE /* ProfileModel.swift */,
 				FBC0CF6A2AA575E0006E3197 /* ProfilePage.storyboard */,
 				FBC0CF672AA575AA006E3197 /* ProfilePageViewController.swift */,
 				67EE45F72AA6B89D00CFD729 /* EditViewController.swift */,
 				6713028C2AA5F54B00C5B0EE /* TableViewCell.swift */,
 				67EE45F52AA6303600CFD729 /* HeaderTableViewCell.swift */,
-				6713028E2AA5F69E00C5B0EE /* ProfileModel.swift */,
 			);
 			path = ProfilePage;
 			sourceTree = "<group>";

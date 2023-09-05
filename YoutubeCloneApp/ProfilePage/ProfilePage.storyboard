@@ -185,7 +185,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ilz-KY-zU6"/>
                     <connections>
-                        <outlet property="editTextField" destination="2Eu-3Z-Oe2" id="c8a-ci-jXq"/>
+                        <outlet property="doneButton" destination="dwd-Uh-cny" id="c5A-0F-eel"/>
+                        <outlet property="editTextField" destination="2Eu-3Z-Oe2" id="VV9-tj-EPN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAj-Rb-hJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

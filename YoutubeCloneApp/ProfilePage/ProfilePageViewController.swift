@@ -15,7 +15,7 @@ protocol PerformSegue {
 class ProfilePageViewController: UIViewController {
  
     @IBOutlet weak var tableView: UITableView!
-    var name = ""
+    var name = "닉네임"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,7 @@ class ProfilePageViewController: UIViewController {
         if let userName = UserDefaults.standard.string(forKey: "userName") {
                    name = userName
                }
-        
- 
+
     }
     
 }

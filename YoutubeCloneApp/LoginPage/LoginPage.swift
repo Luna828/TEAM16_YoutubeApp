@@ -24,6 +24,12 @@ class LoginPageViewController: UIViewController {
         
         // 초기에 로그인 버튼 비활성화
         loginButton.isEnabled = false
+        emailTextField.layer.borderColor = UIColor.darkGray.cgColor
+        emailTextField.layer.borderWidth = 1.0
+        emailTextField.layer.cornerRadius = 10.0
+        passwordTextField.layer.borderColor = UIColor.darkGray.cgColor
+        passwordTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.cornerRadius = 10.0
                 
         // emailTextField와 passwordTextField에 대한 editingChanged 이벤트 관찰자 추가
         emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -82,3 +88,7 @@ class LoginPageViewController: UIViewController {
         }
     }
 }
+
+
+
+

@@ -10,11 +10,11 @@ import Foundation
 
 class UserDataManager {
     static let shared = UserDataManager()
-//
-//    func updateInfo(name: String){
-//        UserDefaults.standard.set(name, forKey: "userName")
-//
-//    }
-//
+
+    func updateInfo(name: String){
+        UserDefaults.standard.set(name, forKey: "userName")
+
+    }
+
     
 }

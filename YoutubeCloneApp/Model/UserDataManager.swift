@@ -16,6 +16,7 @@ class UserDataManager {
     private func saveUserData(_ users: [UserModel]) {
         if let encodedData = try? JSONEncoder().encode(users) {
             UserDefaults.standard.set(encodedData, forKey: "users")
+            print(users)
         }
     }
     

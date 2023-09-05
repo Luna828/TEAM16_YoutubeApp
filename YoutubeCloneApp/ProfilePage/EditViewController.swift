@@ -12,6 +12,7 @@ class EditViewController: UIViewController {
     @IBOutlet weak var editTextField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
     var delegate: PerformSegue?
+    var name: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +21,18 @@ class EditViewController: UIViewController {
     
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
-        if let editName = editTextField.text, !editName.isEmpty {
-            delegate?.sendName(name: editName)
-            //UserDataManager.shared.updateInfo(name: editName)
+        if let newName = editTextField.text, !newName.isEmpty {
+            delegate?.sendName(name: newName)
+            UserDataManager.shared.updateUser(name: name, newName: newName)
+            print(name!, newName)
         }
         navigationController?.popViewController(animated: true)
     }
     
 }
 
+
+// MARK: -UITextFieldDelegate
 extension EditViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

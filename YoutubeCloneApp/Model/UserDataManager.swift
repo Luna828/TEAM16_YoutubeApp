@@ -35,15 +35,11 @@ class UserDataManager {
         saveUserData(users)
     }
     
-    func updateUser(name: String, email: String, password: String) {
+    func updateUser(name: String, newName: String) {
         var users = getUsers()
         if let index = users.firstIndex(where: { $0.name == name }) {
-            users[index] = UserModel(name: name, email: email, password: password)
+            users[index].name = newName
             saveUserData(users)
         }
-    }
-    
-    func updateInfo(name: String) {
-        UserDefaults.standard.set(name, forKey: "userName")
     }
 }

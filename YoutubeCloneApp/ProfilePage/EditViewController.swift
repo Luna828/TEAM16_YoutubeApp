@@ -22,7 +22,7 @@ class EditViewController: UIViewController {
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         if let editName = editTextField.text, !editName.isEmpty {
             delegate?.sendName(name: editName)
-            UserDataManager.shared.updateInfo(name: editName)
+            //UserDataManager.shared.updateInfo(name: editName)
         }
         navigationController?.popViewController(animated: true)
     }

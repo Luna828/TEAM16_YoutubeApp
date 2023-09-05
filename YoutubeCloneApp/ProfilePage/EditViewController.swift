@@ -24,7 +24,7 @@ class EditViewController: UIViewController {
             delegate?.sendName(name: editName)
             UserDefaults.standard.set(editName, forKey: "userName")
         }
-        self.dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
 }

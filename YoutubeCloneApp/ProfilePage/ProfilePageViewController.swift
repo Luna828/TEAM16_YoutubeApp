@@ -13,22 +13,27 @@ protocol PerformSegue {
 }
 
 class ProfilePageViewController: UIViewController {
- 
+    
     @IBOutlet weak var tableView: UITableView!
-    var name = "닉네임"
+    var name = "이름"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
         
         if let userName = UserDefaults.standard.string(forKey: "userName") {
-                   name = userName
-               }
-
+            name = userName
+        }
     }
     
 }
+
 
 // MARK: -UITableViewDelegate
 extension ProfilePageViewController: UITableViewDelegate {
@@ -45,7 +50,7 @@ extension ProfilePageViewController: UITableViewDelegate {
     // 셀 누를때
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row != 0 {
-           tableView.deselectRow(at: indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
@@ -67,9 +72,9 @@ extension ProfilePageViewController: UITableViewDataSource {
             cell.nameLabel.text = name
             
             if let lastCharacter = name.last {
-               cell.viewName.text = String(lastCharacter)
+                cell.viewName.text = String(lastCharacter)
             } else {
-               cell.viewName.text = ""
+                cell.viewName.text = ""
             }
             
             return cell
@@ -81,8 +86,8 @@ extension ProfilePageViewController: UITableViewDataSource {
             cell.label.text = list[indexPath.row].title
             
             if list[indexPath.row].title == "내 premium 혜택" ||
-               list[indexPath.row].title == "Youtube 스튜디오" ||
-               list[indexPath.row].title == "Youtube Music"{
+                list[indexPath.row].title == "Youtube 스튜디오" ||
+                list[indexPath.row].title == "Youtube Music"{
                 cell.icon.image = list[indexPath.row].icon.withTintColor(.red, renderingMode: .alwaysOriginal)
             } else {
                 cell.icon.image = list[indexPath.row].icon.withTintColor(.black, renderingMode: .alwaysOriginal)
@@ -99,27 +104,25 @@ extension ProfilePageViewController: PerformSegue {
     
     func performSegue() {
         self.performSegue(withIdentifier: "goEdit", sender: self)
-       }
-    
+    }
     
     func sendName(name: String) {
-              let indexPath = IndexPath(row: 0, section: 0)
-              if let headerCell = tableView.cellForRow(at: indexPath) as? HeaderTableViewCell {
-                  headerCell.nameLabel.text = name
-                  if let lastCharacter = name.last {
-                      headerCell.viewName.text = String(lastCharacter)
-                  } else {
-                      headerCell.viewName.text = ""
-                  }
-              }
-          }
-
-
+        let indexPath = IndexPath(row: 0, section: 0)
+        if let headerCell = tableView.cellForRow(at: indexPath) as? HeaderTableViewCell {
+            headerCell.nameLabel.text = name
+            if let lastCharacter = name.last {
+                headerCell.viewName.text = String(lastCharacter)
+            } else {
+                headerCell.viewName.text = ""
+            }
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goEdit" {
             let nextVC = segue.destination as! EditViewController
             nextVC.delegate = self
         }
     }
-
+    
 }

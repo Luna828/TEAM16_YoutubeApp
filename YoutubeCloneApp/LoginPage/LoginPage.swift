@@ -18,28 +18,23 @@ class LoginPageViewController: UIViewController {
     
     var isChecked = false
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // 초기에 로그인 버튼 비활성화
         loginButton.isEnabled = false
-        emailTextField.layer.borderColor = UIColor.darkGray.cgColor
-        emailTextField.layer.borderWidth = 1.0
-        emailTextField.layer.cornerRadius = 10.0
-        passwordTextField.layer.borderColor = UIColor.darkGray.cgColor
-        passwordTextField.layer.borderWidth = 1.0
-        passwordTextField.layer.cornerRadius = 10.0
-                
-        // emailTextField와 passwordTextField에 대한 editingChanged 이벤트 관찰자 추가
-        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
+        setupTextField()
     }
     
     @objc func textFieldDidChange() {
         // email과 password 텍스트 필드가 모두 비어 있지 않으면 로그인 버튼 활성화
-        if let emailText = emailTextField.text, let passwordText = passwordTextField.text {
-            loginButton.isEnabled = !emailText.isEmpty && !passwordText.isEmpty
+        if let emailText = emailTextField.text,
+           let passwordText = passwordTextField.text
+        {
+            let isEmailValid = emailText.isValidEmail()
+            let isPasswordValid = passwordText.isValidPassword()
+            
+            loginButton.isEnabled = !emailText.isEmpty && !passwordText.isEmpty && isEmailValid && isPasswordValid
         } else {
             loginButton.isEnabled = false
         }
@@ -73,7 +68,6 @@ class LoginPageViewController: UIViewController {
     }
     
     @IBAction func rememberEmail(_ sender: Any) {
-        
         isChecked.toggle()
         print(isChecked)
         
@@ -89,6 +83,18 @@ class LoginPageViewController: UIViewController {
     }
 }
 
-
-
-
+extension LoginPageViewController {
+    private func setupTextField() {
+        emailTextField.layer.borderColor = UIColor.darkGray.cgColor
+        emailTextField.layer.borderWidth = 1.0
+        emailTextField.layer.cornerRadius = 10.0
+        passwordTextField.layer.borderColor = UIColor.darkGray.cgColor
+        passwordTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.cornerRadius = 10.0
+        passwordTextField.isSecureTextEntry = true
+                
+        // emailTextField와 passwordTextField에 대한 editingChanged 이벤트 관찰자 추가
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+}

@@ -16,7 +16,7 @@ class RegisterPage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerButton.isEnabled = false
+        registerButton.isEnabled = false //버튼이 눌리지 않게 비활성화
         navigationItem.title = ""
        
         setupTextField()
@@ -61,9 +61,11 @@ extension RegisterPage {
         passwordTextField.layer.borderColor = UIColor.darkGray.cgColor
         passwordTextField.layer.borderWidth = 1.0
         passwordTextField.layer.cornerRadius = 10.0
+        passwordTextField.isSecureTextEntry = true
         checkPwdTextField.layer.borderColor = UIColor.darkGray.cgColor
         checkPwdTextField.layer.borderWidth = 1.0
         checkPwdTextField.layer.cornerRadius = 10.0
+        checkPwdTextField.isSecureTextEntry = true
         
         nameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)

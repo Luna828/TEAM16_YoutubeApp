@@ -13,6 +13,8 @@ class RegisterPage: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var checkPwdTextField: UITextField!
     @IBOutlet var registerButton: UIButton!
+    let showPasswordButton = UIButton(type: .custom)
+    let showCheckPasswordButton = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,16 @@ class RegisterPage: UIViewController {
             }
         }
     }
+    
+    @objc func togglePasswordVisibility() {
+        passwordTextField.isSecureTextEntry.toggle()
+        updateShowPasswordButtonImage(isSecure: passwordTextField.isSecureTextEntry)
+    }
+    
+    private func updateShowPasswordButtonImage(isSecure: Bool) {
+            let imageName = isSecure ? "eye" : "eye.fill"
+            showPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
+        }
 }
 
 extension RegisterPage {
@@ -66,6 +78,16 @@ extension RegisterPage {
         checkPwdTextField.layer.borderWidth = 1.0
         checkPwdTextField.layer.cornerRadius = 10.0
         checkPwdTextField.isSecureTextEntry = true
+        
+       
+        showPasswordButton.setImage(UIImage(systemName: "eye"), for: .normal)
+        showPasswordButton.tintColor = UIColor.black
+        showPasswordButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        showPasswordButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
+        showPasswordButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        
+        passwordTextField.rightView = showPasswordButton
+        passwordTextField.rightViewMode = .always
         
         nameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)

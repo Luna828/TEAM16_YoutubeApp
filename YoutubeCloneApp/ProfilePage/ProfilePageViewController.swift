@@ -29,8 +29,8 @@ class ProfilePageViewController: UIViewController {
         
         let users = UserDataManager.shared.getUsers()
   
-        if let lastUser = users.last {
-            userModel = lastUser
+        if let firstUser = users.first{
+            userModel = firstUser
             tableView.reloadData()
         }
     }

@@ -27,6 +27,7 @@ class ProfilePageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+
         let users = UserDataManager.shared.getUsers()
   
         if let firstUser = users.first{
@@ -34,8 +35,6 @@ class ProfilePageViewController: UIViewController {
             tableView.reloadData()
         }
     }
-
-      
   }
 
 
@@ -82,7 +81,6 @@ extension ProfilePageViewController: UITableViewDataSource {
             } else {
                 cell.viewName.text = ""
             }
-            
             return cell
         } else if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "bottomCell", for: indexPath) as! BottomTableViewCell

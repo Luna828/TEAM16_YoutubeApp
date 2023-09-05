@@ -37,20 +37,10 @@ class UserDataManager {
     }
     
     func updateUser(name: String, newName: String) {
-          var users = getUsers()
-        print(users)
-          if let index = users.firstIndex(where: { $0.name == name }) {
-              users[index].name = newName
-              saveUserData(users)
-          }
-      }
-  }
-
-
-
-
-
-
-
-
-
+        var users = getUsers()
+        if let index = users.firstIndex(where: { $0.name == name }) {
+            users[index].name = newName
+            saveUserData(users)
+        }
+    }
+}

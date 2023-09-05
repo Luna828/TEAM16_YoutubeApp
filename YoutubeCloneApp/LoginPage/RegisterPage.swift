@@ -8,13 +8,11 @@
 import UIKit
 
 class RegisterPage: UIViewController {
-    
-    
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var checkPwdTextField: UITextField!
-    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var checkPwdTextField: UITextField!
+    @IBOutlet var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,17 +38,24 @@ class RegisterPage: UIViewController {
         checkPwdTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         
         registerButton.isEnabled = false
-
     }
 
-    @objc func textFieldDidChange(){
+    @objc func textFieldDidChange() {
+        //이메일과 비밀번호 예시
+        //123@example.com
+        //PassW0rd!
         if let nameText = nameTextField.text,
            let emailText = emailTextField.text,
            let passwordText = passwordTextField.text,
-           let checkPwdText = checkPwdTextField.text {
-            registerButton.isEnabled = !nameText.isEmpty && !emailText.isEmpty && !passwordText.isEmpty && !checkPwdText.isEmpty
+           let checkPwdText = checkPwdTextField.text
+        {
+            let isEmailValid = emailText.isValidEmail()
+            let isPasswordValid = passwordText.isValidPassword()
+            let isCheckedPwdValid = checkPwdText == passwordText
+                    
+            registerButton.isEnabled = !nameText.isEmpty && !emailText.isEmpty && !passwordText.isEmpty && !checkPwdText.isEmpty && isEmailValid && isPasswordValid && isCheckedPwdValid
         } else {
-            registerButton.isHidden = false
+            registerButton.isEnabled = false
         }
         
         UIView.animate(withDuration: 0.3) {
@@ -63,12 +68,12 @@ class RegisterPage: UIViewController {
     }
 }
 
-//비밀번호 정규 표현식
+// 비밀번호 정규 표현식
 extension String {
-    //대소문자, 특수문자, 숫자 8자 이상일 때 -> true
+    // 대소문자, 특수문자, 숫자 8자 이상일 때 -> true
     func isValidPassword() -> Bool {
         let regularExpression = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}"
-        let passwordValidation = NSPredicate.init(format: "SELF MATCHES %@", regularExpression)
+        let passwordValidation = NSPredicate(format: "SELF MATCHES %@", regularExpression)
         
         return passwordValidation.evaluate(with: self)
     }
@@ -76,7 +81,7 @@ extension String {
     // @와2글자 이상 확인
     func isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format: "SELF MATCHES", emailRegEx)
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
         
         return emailTest.evaluate(with: self)
     }

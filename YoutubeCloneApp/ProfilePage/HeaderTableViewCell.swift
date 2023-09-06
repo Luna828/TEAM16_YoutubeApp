@@ -13,7 +13,7 @@ class HeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var viewName: UILabel!
     
-    var delegate: PerformSegue?
+    var delegate: HeaderCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +34,7 @@ class HeaderTableViewCell: UITableViewCell {
     
     
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
+        delegate?.outButtonTapped()
     }
     
     

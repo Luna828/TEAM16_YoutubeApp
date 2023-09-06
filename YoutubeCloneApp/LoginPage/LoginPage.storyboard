@@ -121,7 +121,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a1w-FC-LeE">
-                                <rect key="frame" x="15" y="345" width="363" height="245.33333333333337"/>
+                                <rect key="frame" x="15" y="255" width="363" height="245.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOF-Cm-HqW">
                                         <rect key="frame" x="0.0" y="0.0" width="363" height="13.333333333333334"/>
@@ -151,7 +151,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="381-ZQ-wbG">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호(대소문자,8글자이상,특수문자)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="381-ZQ-wbG">
                                         <rect key="frame" x="0.0" y="148" width="363" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -162,21 +162,21 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 재확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VXj-SJ-EQm">
-                                        <rect key="frame" x="0.0" y="211.33333333333337" width="363" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 재확인(대소문자,8글자이상,특수문자)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VXj-SJ-EQm">
+                                        <rect key="frame" x="0.0" y="211.33333333333331" width="363" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 계정 만들기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFu-fG-ZWO">
-                                <rect key="frame" x="80" y="259" width="233" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입✅" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFu-fG-ZWO">
+                                <rect key="frame" x="80" y="169" width="233" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-Xv-pGS">
-                                <rect key="frame" x="15" y="606.33333333333337" width="363" height="50"/>
+                                <rect key="frame" x="15" y="516.33333333333337" width="363" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vvl-na-umc"/>
@@ -203,7 +203,7 @@
                             <constraint firstItem="OFu-fG-ZWO" firstAttribute="leading" secondItem="nzi-sO-ROY" secondAttribute="leading" constant="80" id="2ye-76-4hG"/>
                             <constraint firstItem="nzi-sO-ROY" firstAttribute="trailing" secondItem="Uoa-Xv-pGS" secondAttribute="trailing" constant="15" id="Bcj-my-5dM"/>
                             <constraint firstItem="Uoa-Xv-pGS" firstAttribute="leading" secondItem="nzi-sO-ROY" secondAttribute="leading" constant="15" id="JuF-TH-txq"/>
-                            <constraint firstItem="OFu-fG-ZWO" firstAttribute="top" secondItem="nzi-sO-ROY" secondAttribute="top" constant="200" id="OyL-nm-KPk"/>
+                            <constraint firstItem="OFu-fG-ZWO" firstAttribute="top" secondItem="nzi-sO-ROY" secondAttribute="top" constant="110" id="OyL-nm-KPk"/>
                             <constraint firstItem="a1w-FC-LeE" firstAttribute="leading" secondItem="nzi-sO-ROY" secondAttribute="leading" constant="15" id="SGJ-rD-DvP"/>
                             <constraint firstItem="a1w-FC-LeE" firstAttribute="top" secondItem="OFu-fG-ZWO" secondAttribute="bottom" constant="50" id="SVn-g0-ho7"/>
                             <constraint firstItem="nzi-sO-ROY" firstAttribute="trailing" secondItem="a1w-FC-LeE" secondAttribute="trailing" constant="15" id="T7a-Zg-MNx"/>

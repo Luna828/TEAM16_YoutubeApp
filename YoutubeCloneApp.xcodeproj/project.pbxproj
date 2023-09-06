@@ -14,6 +14,9 @@
 		67EE45FB2AA6DFC500CFD729 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE45FA2AA6DFC500CFD729 /* UserModel.swift */; };
 		67EE45FD2AA6E01900CFD729 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE45FC2AA6E01900CFD729 /* UserDataManager.swift */; };
 		67EE45FF2AA708EF00CFD729 /* BottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE45FE2AA708EF00CFD729 /* BottomTableViewCell.swift */; };
+		FB6F8BFD2AA8154A001EAEBB /* YoutubeApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6F8BFC2AA8154A001EAEBB /* YoutubeApiModel.swift */; };
+		FB6F8BFF2AA81C72001EAEBB /* YoutubeApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6F8BFE2AA81C72001EAEBB /* YoutubeApiManager.swift */; };
+		FB6F8C022AA8252E001EAEBB /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6F8C012AA8252E001EAEBB /* Secrets.swift */; };
 		FB6FCB932AA5E2900099DA49 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FCB922AA5E2900099DA49 /* Color+Extension.swift */; };
 		FB6FCB952AA623720099DA49 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FCB942AA623720099DA49 /* RegisterPage.swift */; };
 		FBBFD5312AA56D9F00F3757C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFD5302AA56D9F00F3757C /* AppDelegate.swift */; };
@@ -41,6 +44,9 @@
 		67EE45FA2AA6DFC500CFD729 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		67EE45FC2AA6E01900CFD729 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		67EE45FE2AA708EF00CFD729 /* BottomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTableViewCell.swift; sourceTree = "<group>"; };
+		FB6F8BFC2AA8154A001EAEBB /* YoutubeApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeApiModel.swift; sourceTree = "<group>"; };
+		FB6F8BFE2AA81C72001EAEBB /* YoutubeApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeApiManager.swift; sourceTree = "<group>"; };
+		FB6F8C012AA8252E001EAEBB /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		FB6FCB922AA5E2900099DA49 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		FB6FCB942AA623720099DA49 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
 		FBBFD52D2AA56D9F00F3757C /* YoutubeCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +88,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FB6F8BFB2AA81528001EAEBB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FB6F8BFC2AA8154A001EAEBB /* YoutubeApiModel.swift */,
+				FB6F8BFE2AA81C72001EAEBB /* YoutubeApiManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		FBBFD5242AA56D9F00F3757C = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +116,8 @@
 		FBBFD52F2AA56D9F00F3757C /* YoutubeCloneApp */ = {
 			isa = PBXGroup;
 			children = (
+				FB6F8C012AA8252E001EAEBB /* Secrets.swift */,
+				FB6F8BFB2AA81528001EAEBB /* API */,
 				67EE45F92AA6DFAD00CFD729 /* Model */,
 				FBC0CF6C2AA5781D006E3197 /* LoginPage */,
 				FBC0CF692AA575B0006E3197 /* ProfilePage */,
@@ -237,15 +254,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				67EE45FD2AA6E01900CFD729 /* UserDataManager.swift in Sources */,
+				FB6F8C022AA8252E001EAEBB /* Secrets.swift in Sources */,
 				6713028F2AA5F69E00C5B0EE /* ProfileModel.swift in Sources */,
 				FB6FCB952AA623720099DA49 /* RegisterPage.swift in Sources */,
 				FBC0CF682AA575AA006E3197 /* ProfilePageViewController.swift in Sources */,
+				FB6F8BFD2AA8154A001EAEBB /* YoutubeApiModel.swift in Sources */,
 				67EE45FF2AA708EF00CFD729 /* BottomTableViewCell.swift in Sources */,
 				6713028D2AA5F54B00C5B0EE /* TableViewCell.swift in Sources */,
 				FBC0CF612AA57349006E3197 /* MainPageViewController.swift in Sources */,
 				FBC9AF212AA6C244000F25F0 /* String +.swift in Sources */,
 				FBBFD5352AA56D9F00F3757C /* ViewController.swift in Sources */,
 				67EE45FB2AA6DFC500CFD729 /* UserModel.swift in Sources */,
+				FB6F8BFF2AA81C72001EAEBB /* YoutubeApiManager.swift in Sources */,
 				67EE45F62AA6303600CFD729 /* HeaderTableViewCell.swift in Sources */,
 				FBBFD5312AA56D9F00F3757C /* AppDelegate.swift in Sources */,
 				FBC0CF702AA57839006E3197 /* LoginPage.swift in Sources */,

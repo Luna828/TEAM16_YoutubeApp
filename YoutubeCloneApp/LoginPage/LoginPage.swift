@@ -20,6 +20,7 @@ class LoginPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(UserDataManager.shared.getUsers())
         // 초기에 로그인 버튼 비활성화
         loginButton.isEnabled = false
         

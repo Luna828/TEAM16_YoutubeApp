@@ -8,6 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--LoginPage-->
+        <scene sceneID="slZ-Ys-0uu">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LoginPage" storyboardName="LoginPage" referencedIdentifier="LoginPage" id="C5N-dz-cyw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gaF-cI-GYA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xe-9D-u4e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3448" y="-461"/>
+        </scene>
         <!--ProfilePage-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -57,6 +67,7 @@
                                                     <state key="normal" title="로그아웃"/>
                                                     <connections>
                                                         <action selector="logoutButtonTapped:" destination="ueH-EN-Iiv" eventType="touchUpInside" id="vgh-c1-wOy"/>
+                                                        <segue destination="C5N-dz-cyw" kind="show" identifier="goLogin" id="Pmf-Ke-q1F"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcc-aZ-Q6o">
@@ -211,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAj-Rb-hJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3661.8320610687019" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="3706" y="-27"/>
         </scene>
     </scenes>
     <resources>

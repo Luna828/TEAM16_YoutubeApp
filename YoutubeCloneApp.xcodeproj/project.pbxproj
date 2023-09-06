@@ -14,6 +14,10 @@
 		67EE45FB2AA6DFC500CFD729 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE45FA2AA6DFC500CFD729 /* UserModel.swift */; };
 		67EE45FD2AA6E01900CFD729 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE45FC2AA6E01900CFD729 /* UserDataManager.swift */; };
 		67EE45FF2AA708EF00CFD729 /* BottomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EE45FE2AA708EF00CFD729 /* BottomTableViewCell.swift */; };
+		EC31823D2AA80244009B4DBC /* DetailPagePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31823C2AA80244009B4DBC /* DetailPagePlayer.swift */; };
+		EC31823F2AA804AB009B4DBC /* DetailPageHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC31823E2AA804AB009B4DBC /* DetailPageHeaderCell.swift */; };
+		EC3182412AA84C5B009B4DBC /* DetailPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3182402AA84C5B009B4DBC /* DetailPageModel.swift */; };
+		EC40DB2A2AA76AA800359C5A /* DetailPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40DB292AA76AA800359C5A /* DetailPageTableViewCell.swift */; };
 		FB6FCB932AA5E2900099DA49 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FCB922AA5E2900099DA49 /* Color+Extension.swift */; };
 		FB6FCB952AA623720099DA49 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FCB942AA623720099DA49 /* RegisterPage.swift */; };
 		FBBFD5312AA56D9F00F3757C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFD5302AA56D9F00F3757C /* AppDelegate.swift */; };
@@ -25,7 +29,7 @@
 		FBC0CF5F2AA57339006E3197 /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBC0CF5E2AA57339006E3197 /* MainPage.storyboard */; };
 		FBC0CF612AA57349006E3197 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0CF602AA57349006E3197 /* MainPageViewController.swift */; };
 		FBC0CF642AA57458006E3197 /* DetailPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBC0CF632AA57458006E3197 /* DetailPage.storyboard */; };
-		FBC0CF662AA57471006E3197 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0CF652AA57471006E3197 /* DetailPage.swift */; };
+		FBC0CF662AA57471006E3197 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0CF652AA57471006E3197 /* DetailPageViewController.swift */; };
 		FBC0CF682AA575AA006E3197 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC0CF672AA575AA006E3197 /* ProfilePageViewController.swift */; };
 		FBC0CF6B2AA575E0006E3197 /* ProfilePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBC0CF6A2AA575E0006E3197 /* ProfilePage.storyboard */; };
 		FBC0CF6E2AA5782F006E3197 /* LoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBC0CF6D2AA5782F006E3197 /* LoginPage.storyboard */; };
@@ -41,6 +45,10 @@
 		67EE45FA2AA6DFC500CFD729 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		67EE45FC2AA6E01900CFD729 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		67EE45FE2AA708EF00CFD729 /* BottomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTableViewCell.swift; sourceTree = "<group>"; };
+		EC31823C2AA80244009B4DBC /* DetailPagePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPagePlayer.swift; sourceTree = "<group>"; };
+		EC31823E2AA804AB009B4DBC /* DetailPageHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageHeaderCell.swift; sourceTree = "<group>"; };
+		EC3182402AA84C5B009B4DBC /* DetailPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageModel.swift; sourceTree = "<group>"; };
+		EC40DB292AA76AA800359C5A /* DetailPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageTableViewCell.swift; sourceTree = "<group>"; };
 		FB6FCB922AA5E2900099DA49 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		FB6FCB942AA623720099DA49 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
 		FBBFD52D2AA56D9F00F3757C /* YoutubeCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +62,7 @@
 		FBC0CF5E2AA57339006E3197 /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
 		FBC0CF602AA57349006E3197 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		FBC0CF632AA57458006E3197 /* DetailPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPage.storyboard; sourceTree = "<group>"; };
-		FBC0CF652AA57471006E3197 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
+		FBC0CF652AA57471006E3197 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		FBC0CF672AA575AA006E3197 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		FBC0CF6A2AA575E0006E3197 /* ProfilePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfilePage.storyboard; sourceTree = "<group>"; };
 		FBC0CF6D2AA5782F006E3197 /* LoginPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginPage.storyboard; sourceTree = "<group>"; };
@@ -131,7 +139,11 @@
 			isa = PBXGroup;
 			children = (
 				FBC0CF632AA57458006E3197 /* DetailPage.storyboard */,
-				FBC0CF652AA57471006E3197 /* DetailPage.swift */,
+				FBC0CF652AA57471006E3197 /* DetailPageViewController.swift */,
+				EC40DB292AA76AA800359C5A /* DetailPageTableViewCell.swift */,
+				EC31823C2AA80244009B4DBC /* DetailPagePlayer.swift */,
+				EC31823E2AA804AB009B4DBC /* DetailPageHeaderCell.swift */,
+				EC3182402AA84C5B009B4DBC /* DetailPageModel.swift */,
 			);
 			path = DetailPage;
 			sourceTree = "<group>";
@@ -245,14 +257,18 @@
 				FBC0CF612AA57349006E3197 /* MainPageViewController.swift in Sources */,
 				FBC9AF212AA6C244000F25F0 /* String +.swift in Sources */,
 				FBBFD5352AA56D9F00F3757C /* ViewController.swift in Sources */,
+				EC31823D2AA80244009B4DBC /* DetailPagePlayer.swift in Sources */,
 				67EE45FB2AA6DFC500CFD729 /* UserModel.swift in Sources */,
 				67EE45F62AA6303600CFD729 /* HeaderTableViewCell.swift in Sources */,
 				FBBFD5312AA56D9F00F3757C /* AppDelegate.swift in Sources */,
 				FBC0CF702AA57839006E3197 /* LoginPage.swift in Sources */,
+				EC31823F2AA804AB009B4DBC /* DetailPageHeaderCell.swift in Sources */,
+				EC3182412AA84C5B009B4DBC /* DetailPageModel.swift in Sources */,
 				67EE45F82AA6B89D00CFD729 /* EditViewController.swift in Sources */,
-				FBC0CF662AA57471006E3197 /* DetailPage.swift in Sources */,
+				FBC0CF662AA57471006E3197 /* DetailPageViewController.swift in Sources */,
 				FBBFD5332AA56D9F00F3757C /* SceneDelegate.swift in Sources */,
 				FB6FCB932AA5E2900099DA49 /* Color+Extension.swift in Sources */,
+				EC40DB2A2AA76AA800359C5A /* DetailPageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -382,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -400,7 +416,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V7K58MBUV9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YoutubeCloneApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -430,7 +446,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V7K58MBUV9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YoutubeCloneApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

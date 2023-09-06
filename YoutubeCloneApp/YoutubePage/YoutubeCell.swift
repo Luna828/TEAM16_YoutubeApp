@@ -74,7 +74,6 @@ final class YoutubeCell: UICollectionViewCell {
     private func setLayout() {
         contentView.addSubview(mainStackView)
 
-        // Use Auto Layout for constraints
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -95,7 +94,7 @@ final class YoutubeCell: UICollectionViewCell {
             URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
                 guard let data = data, error == nil else {
                     // Handle error
-                    print("Error fetching image: \(error?.localizedDescription ?? "Unknown error")")
+                    print("Error image: \(error?.localizedDescription ?? "")")
                     return
                 }
                 
@@ -104,7 +103,7 @@ final class YoutubeCell: UICollectionViewCell {
                         self?.imageView.image = image
                     }
                 }
-            }.resume() // Start the data task
+            }.resume()
         }
         channelTitle.text = data.snippet.channelTitle
         titleLabel.text = data.snippet.title
@@ -112,6 +111,6 @@ final class YoutubeCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError()
     }
 }

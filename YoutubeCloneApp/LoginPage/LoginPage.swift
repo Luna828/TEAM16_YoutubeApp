@@ -20,6 +20,11 @@ class LoginPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(UserDataManager.shared.getUsers())
+        YoutubeApiManager.shared.fetchVideo { data in
+            //print("data: \(data)")
+        }
+        
         // 초기에 로그인 버튼 비활성화
         loginButton.isEnabled = false
         
@@ -32,8 +37,8 @@ class LoginPageViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            view.endEditing(true)
-        }
+        view.endEditing(true)
+    }
     
     @objc func textFieldDidChange() {
         // email과 password 텍스트 필드가 모두 비어 있지 않으면 로그인 버튼 활성화

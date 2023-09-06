@@ -36,6 +36,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="ygc-N2-6zL" kind="relationship" relationship="viewControllers" id="6I9-z1-KwX"/>
+                        <segue destination="FYR-xu-Q5Q" kind="relationship" relationship="viewControllers" id="kZt-Qh-XoB"/>
                         <segue destination="hbB-m4-wML" kind="relationship" relationship="viewControllers" id="CQt-IW-Hox"/>
                         <segue destination="yr6-7K-Xk6" kind="relationship" relationship="viewControllers" id="w4E-lh-kbc"/>
                     </connections>
@@ -53,6 +54,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFw-dz-rZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="175" y="-290"/>
+        </scene>
+        <!--YoutubePage-->
+        <scene sceneID="QFJ-B3-pvU">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Youtube" storyboardName="YoutubePage" id="FYR-xu-Q5Q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="87W-tk-rtw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phB-i6-Xud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="-211"/>
         </scene>
         <!--DetailPage-->
         <scene sceneID="CFS-er-84x">

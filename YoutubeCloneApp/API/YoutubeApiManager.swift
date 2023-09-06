@@ -8,6 +8,7 @@
 import Foundation
 
 final class YoutubeApiManager {
+    //싱글톤
     static let shared = YoutubeApiManager()
     private init() {}
 

@@ -67,6 +67,7 @@ final class YoutubePage: UIViewController, UICollectionViewDelegate, UICollectio
         return cell
     }
 
+    //cell 크기
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let inset: CGFloat = 8
         return CGSize(width: collectionView.bounds.width - inset * 2, height: 240)

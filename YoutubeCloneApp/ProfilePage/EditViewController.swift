@@ -11,7 +11,8 @@ class EditViewController: UIViewController {
     
     @IBOutlet weak var editTextField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
-    var delegate: PerformSegue?
+    var delegate: HeaderCellDelegate?
+    var name: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +21,17 @@ class EditViewController: UIViewController {
     
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
-        if let editName = editTextField.text, !editName.isEmpty {
-            delegate?.sendName(name: editName)
-            UserDataManager.shared.updateInfo(name: editName)
+        if let newName = editTextField.text, !newName.isEmpty {
+            delegate?.sendName(name: newName)
+            UserDataManager.shared.updateUser(name: name, newName: newName)
         }
         navigationController?.popViewController(animated: true)
     }
     
 }
 
+
+// MARK: -UITextFieldDelegate
 extension EditViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -45,7 +48,6 @@ extension EditViewController: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // 글자수 제한
         let maxLength = 10
         let currentString : NSString = (textField.text ?? "") as NSString
         let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString

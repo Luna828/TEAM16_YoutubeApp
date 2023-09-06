@@ -20,10 +20,21 @@ class LoginPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(UserDataManager.shared.getUsers())
+      
         // 초기에 로그인 버튼 비활성화
         loginButton.isEnabled = false
         
         setupTextField()
+        if let rememberEmail = UserDefaults.standard.string(forKey: "rememberEmail") {
+            emailTextField.text = rememberEmail
+            let checkedImage = UIImage(systemName: "checkmark.rectangle.portrait.fill")
+            rememberButton.setImage(checkedImage, for: .normal)
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     @objc func textFieldDidChange() {
@@ -59,7 +70,23 @@ class LoginPageViewController: UIViewController {
         password = text
     }
     
-    @IBAction func loginButton(_ sender: UIButton) {}
+    @IBAction func loginButton(_ sender: UIButton) {
+        let savedUsers = UserDataManager.shared.getUsers()
+           
+        let enteredEmail = emailTextField.text ?? ""
+        let enteredPassword = passwordTextField.text ?? ""
+           
+        if savedUsers.first(where: { $0.email == enteredEmail && $0.password == enteredPassword }) != nil {
+            print("로그인 성공")
+            if let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController {
+                navigationController?.setViewControllers([mainTabBarController], animated: true)
+            }
+        } else {
+            let alertController = UIAlertController(title: "로그인 실패", message: "이메일 또는 비밀번호가 올바르지 않습니다.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        }
+    }
     
     @IBAction func registerButton(_ sender: UIButton) {
         if let registerVC = storyboard?.instantiateViewController(withIdentifier: "RegisterPage") {
@@ -75,10 +102,14 @@ class LoginPageViewController: UIViewController {
             // 버튼의 이미지를 체크된 이미지로 변경
             let checkedImage = UIImage(systemName: "checkmark.rectangle.portrait.fill")
             rememberButton.setImage(checkedImage, for: .normal)
+            
+            UserDefaults.standard.set(email, forKey: "rememberEmail")
         } else {
             // 버튼의 이미지를 체크되지 않은 이미지로 변경
             let uncheckedImage = UIImage(systemName: "checkmark.rectangle.portrait")
             rememberButton.setImage(uncheckedImage, for: .normal)
+            
+            UserDefaults.standard.removeObject(forKey: "rememberEmail")
         }
     }
 }

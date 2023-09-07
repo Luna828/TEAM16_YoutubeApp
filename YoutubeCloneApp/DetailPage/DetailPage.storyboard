@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,244 +12,104 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="DetailPage" title="DetailPage" id="Y6W-OH-hqX" customClass="DetailPageViewController" customModule="YoutubeCloneApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0tz-9e-5EN"/>
-                        <viewControllerLayoutGuide type="bottom" id="C9L-N2-e5x"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I4b-mT-lQ4">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yPr-Sy-aBn">
-                                <rect key="frame" x="0.0" y="52" width="393" height="717"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="9bj-oZ-8MF" userLabel="Player" customClass="DetailPagePlayer" customModule="YoutubeCloneApp" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="270"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JqA-Oz-Owy">
-                                            <rect key="frame" x="76" y="71" width="240" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <wkWebViewConfiguration key="configuration">
-                                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                <wkPreferences key="preferences"/>
-                                            </wkWebViewConfiguration>
-                                        </wkWebView>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="221" id="NFY-fr-6gE"/>
-                                    </constraints>
-                                </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Header" rowHeight="185" id="Xgv-cw-boQ" userLabel="Header" customClass="DetailPageHeaderCell" customModule="YoutubeCloneApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="320" width="393" height="185"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xgv-cw-boQ" id="kTO-Te-qDG">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="185"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조회수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wt-8x-od8" userLabel="조회수">
-                                                    <rect key="frame" x="28" y="47.666666666666664" width="353" height="16.999999999999993"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="thumbUp" translatesAutoresizingMaskIntoConstraints="NO" id="qE8-U2-PI7" userLabel="좋아요 이미지">
-                                                    <rect key="frame" x="28" y="74.666666666666671" width="25" height="25"/>
-                                                    <accessibility key="accessibilityConfiguration">
-                                                        <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                    </accessibility>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="Udp-io-UUN"/>
-                                                        <constraint firstAttribute="width" constant="25" id="yG9-xf-Wx0"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-Lp-7bz" userLabel="프로필 이미지">
-                                                    <rect key="frame" x="20" y="123.66666666666669" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="Ucs-Yo-c1Q"/>
-                                                        <constraint firstAttribute="width" constant="50" id="jJt-qI-J94"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="채널이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5a-Me-i1t" userLabel="채널이름">
-                                                    <rect key="frame" x="78" y="123.66666666666667" width="295" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4b-5L-W2d" userLabel="좋아요 횟수">
-                                                    <rect key="frame" x="61.000000000000007" y="77.666666666666671" width="10.333333333333336" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dx-Bf-EOK" userLabel="싫어요 횟수">
-                                                    <rect key="frame" x="122.33333333333333" y="77.666666666666671" width="9.3333333333333286" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbDown" translatesAutoresizingMaskIntoConstraints="NO" id="sMQ-Qg-i4Z" userLabel="싫어요 이미지">
-                                                    <rect key="frame" x="87.333333333333329" y="74.666666666666671" width="25" height="25"/>
-                                                    <accessibility key="accessibilityConfiguration">
-                                                        <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                                    </accessibility>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="imL-6Z-HhB"/>
-                                                        <constraint firstAttribute="width" constant="25" id="mkW-Jj-pMf"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCa-aS-jEe" userLabel="구분선">
-                                                    <rect key="frame" x="0.0" y="112.66666666666667" width="393" height="1"/>
-                                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="4Vf-pu-pQF"/>
-                                                    </constraints>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="채널구독자 수 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVp-Rp-5kI" userLabel="채널 구독자 ">
-                                                    <rect key="frame" x="78" y="151" width="295" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영상제목" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5M-3E-Eef" userLabel="영상제목">
-                                                    <rect key="frame" x="28" y="19" width="353" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="qE8-U2-PI7" firstAttribute="leading" secondItem="kTO-Te-qDG" secondAttribute="leadingMargin" constant="8" id="6Kh-dZ-Ogn"/>
-                                                <constraint firstItem="8kS-Lp-7bz" firstAttribute="leading" secondItem="kTO-Te-qDG" secondAttribute="leadingMargin" id="6kQ-Sk-H6v"/>
-                                                <constraint firstItem="qE8-U2-PI7" firstAttribute="top" secondItem="1wt-8x-od8" secondAttribute="bottom" constant="10" id="A4m-or-ftU"/>
-                                                <constraint firstItem="sMQ-Qg-i4Z" firstAttribute="leading" secondItem="F4b-5L-W2d" secondAttribute="trailing" constant="16" id="BID-x1-v4x"/>
-                                                <constraint firstItem="l5M-3E-Eef" firstAttribute="top" secondItem="kTO-Te-qDG" secondAttribute="topMargin" constant="8" id="BMb-k5-o57"/>
-                                                <constraint firstItem="6dx-Bf-EOK" firstAttribute="top" secondItem="1wt-8x-od8" secondAttribute="bottom" constant="13" id="FbG-jw-KRB"/>
-                                                <constraint firstItem="yVp-Rp-5kI" firstAttribute="top" secondItem="U5a-Me-i1t" secondAttribute="bottom" constant="7" id="Gg4-0C-i0b"/>
-                                                <constraint firstItem="8kS-Lp-7bz" firstAttribute="top" secondItem="nCa-aS-jEe" secondAttribute="bottom" constant="10" id="LCE-9N-GDo"/>
-                                                <constraint firstItem="6dx-Bf-EOK" firstAttribute="leading" secondItem="sMQ-Qg-i4Z" secondAttribute="trailing" constant="10" id="LsI-DD-LBT"/>
-                                                <constraint firstItem="1wt-8x-od8" firstAttribute="top" secondItem="l5M-3E-Eef" secondAttribute="bottom" constant="5.5" id="Nwg-84-WKT"/>
-                                                <constraint firstItem="U5a-Me-i1t" firstAttribute="trailing" secondItem="kTO-Te-qDG" secondAttribute="trailingMargin" id="O9S-Te-XWJ"/>
-                                                <constraint firstItem="U5a-Me-i1t" firstAttribute="top" secondItem="8kS-Lp-7bz" secondAttribute="top" id="RIV-gX-m5C"/>
-                                                <constraint firstItem="1wt-8x-od8" firstAttribute="trailing" secondItem="kTO-Te-qDG" secondAttribute="trailingMargin" constant="8" id="ThJ-A2-PYI"/>
-                                                <constraint firstItem="yVp-Rp-5kI" firstAttribute="leading" secondItem="8kS-Lp-7bz" secondAttribute="trailing" constant="8" id="Uld-S3-ag3"/>
-                                                <constraint firstItem="l5M-3E-Eef" firstAttribute="leading" secondItem="kTO-Te-qDG" secondAttribute="leadingMargin" constant="8" id="ZvZ-xl-Cab"/>
-                                                <constraint firstAttribute="trailing" secondItem="nCa-aS-jEe" secondAttribute="trailing" id="c0u-9q-z3c"/>
-                                                <constraint firstItem="F4b-5L-W2d" firstAttribute="top" secondItem="1wt-8x-od8" secondAttribute="bottom" constant="13" id="jjI-Lc-WQN"/>
-                                                <constraint firstItem="l5M-3E-Eef" firstAttribute="trailing" secondItem="kTO-Te-qDG" secondAttribute="trailingMargin" constant="8" id="lVP-t0-n1y"/>
-                                                <constraint firstItem="nCa-aS-jEe" firstAttribute="leading" secondItem="kTO-Te-qDG" secondAttribute="leading" id="lnk-3z-lgY"/>
-                                                <constraint firstItem="F4b-5L-W2d" firstAttribute="leading" secondItem="qE8-U2-PI7" secondAttribute="trailing" constant="8" id="qeV-Ew-YaH"/>
-                                                <constraint firstItem="sMQ-Qg-i4Z" firstAttribute="top" secondItem="1wt-8x-od8" secondAttribute="bottom" constant="10" id="rD7-eV-eEh"/>
-                                                <constraint firstItem="yVp-Rp-5kI" firstAttribute="trailing" secondItem="kTO-Te-qDG" secondAttribute="trailingMargin" id="siR-Mo-pH1"/>
-                                                <constraint firstItem="nCa-aS-jEe" firstAttribute="top" secondItem="qE8-U2-PI7" secondAttribute="bottom" constant="13" id="uBS-z6-tef"/>
-                                                <constraint firstItem="U5a-Me-i1t" firstAttribute="leading" secondItem="8kS-Lp-7bz" secondAttribute="trailing" constant="8" id="uwV-VK-zXx"/>
-                                                <constraint firstItem="1wt-8x-od8" firstAttribute="leading" secondItem="kTO-Te-qDG" secondAttribute="leadingMargin" constant="8" id="yOs-y9-HUS"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="ChannelPicImageView" destination="8kS-Lp-7bz" id="zaU-LO-1rB"/>
-                                            <outlet property="ChannelSubscribersLabel" destination="yVp-Rp-5kI" id="Xk3-SR-EQ6"/>
-                                            <outlet property="ChannelTitleLabel" destination="U5a-Me-i1t" id="Nth-xa-pbd"/>
-                                            <outlet property="DisLikesLabel" destination="6dx-Bf-EOK" id="Kfr-wq-fO4"/>
-                                            <outlet property="LikesLabel" destination="F4b-5L-W2d" id="znf-18-DGk"/>
-                                            <outlet property="ThumDownImageView" destination="sMQ-Qg-i4Z" id="DPv-eo-fma"/>
-                                            <outlet property="ThumbupImageView" destination="qE8-U2-PI7" id="MNM-Fw-NEk"/>
-                                            <outlet property="TitleLabel" destination="l5M-3E-Eef" id="Wjq-CP-dLp"/>
-                                            <outlet property="ViewCountLabel" destination="1wt-8x-od8" id="SEX-aV-ALq"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="116" id="umA-Dr-w7Y" customClass="videoCell" customModule="YouTube" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="505" width="393" height="116"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="umA-Dr-w7Y" id="LJM-To-y58">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="116"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obq-Ms-VhU">
-                                                    <rect key="frame" x="202.66666666666663" y="9.9999999999999982" width="170.33333333333337" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3R-Z9-Fph">
-                                                    <rect key="frame" x="202.66666666666663" y="38.333333333333336" width="170.33333333333337" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FFY-oP-HbQ">
-                                                    <rect key="frame" x="10" y="10" width="170.66666666666666" height="96"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="FFY-oP-HbQ" secondAttribute="height" multiplier="16:9" id="52h-sa-LMs"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="w3R-Z9-Fph" firstAttribute="leading" secondItem="FFY-oP-HbQ" secondAttribute="trailing" constant="22" id="6A6-3J-2lI"/>
-                                                <constraint firstItem="w3R-Z9-Fph" firstAttribute="top" secondItem="obq-Ms-VhU" secondAttribute="bottom" constant="8" id="Hof-qx-3GV"/>
-                                                <constraint firstItem="obq-Ms-VhU" firstAttribute="leading" secondItem="FFY-oP-HbQ" secondAttribute="trailing" constant="22" id="cyv-4X-6Hu"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="w3R-Z9-Fph" secondAttribute="trailing" id="eOI-xX-U0J"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="obq-Ms-VhU" secondAttribute="trailing" id="ymN-aW-jz0"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <constraints>
-                                            <constraint firstItem="FFY-oP-HbQ" firstAttribute="top" secondItem="umA-Dr-w7Y" secondAttribute="top" constant="10" id="5yG-me-mA6"/>
-                                            <constraint firstItem="obq-Ms-VhU" firstAttribute="top" secondItem="umA-Dr-w7Y" secondAttribute="top" constant="10" id="CNd-lU-a6C"/>
-                                            <constraint firstItem="FFY-oP-HbQ" firstAttribute="leading" secondItem="umA-Dr-w7Y" secondAttribute="leading" constant="10" id="D3X-3G-jZa"/>
-                                            <constraint firstAttribute="bottom" secondItem="FFY-oP-HbQ" secondAttribute="bottom" constant="10" id="vhJ-EL-svq"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="name" destination="w3R-Z9-Fph" id="gyG-Q1-DgD"/>
-                                            <outlet property="thumnails" destination="FFY-oP-HbQ" id="MV7-xL-IuK"/>
-                                            <outlet property="title" destination="obq-Ms-VhU" id="8RI-eZ-KeX"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNZ-nh-dJt" userLabel="MInimize Button">
-                                <rect key="frame" x="20" y="79" width="30" height="30"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="me8-lu-eF0">
+                                <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                                <color key="backgroundColor" red="0.028106689453125" green="0.028106691315770149" blue="0.028106689453125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="PuJ-r2-IJw"/>
-                                    <constraint firstAttribute="width" constant="30" id="g1N-U4-E6G"/>
+                                    <constraint firstAttribute="height" constant="300" id="O08-pU-ltA"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="minimize"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동영상 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tR-7g-Ecw">
+                                <rect key="frame" x="14.999999999999993" y="374" width="127.33333333333331" height="33.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwb-x3-0Es">
+                                <rect key="frame" x="21" y="422.66666666666669" width="29.666666666666671" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnS-bh-hUW">
+                                <rect key="frame" x="68" y="461" width="59.666666666666657" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="hand.thumbsdown.fill" catalog="system" title="0">
+                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eR9-1I-crH">
+                                <rect key="frame" x="8" y="456.33333333333331" width="65" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="sQP-TA-yOR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="hand.thumbsup.fill" catalog="system" title="0">
+                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApK-T9-xaS">
+                                <rect key="frame" x="15" y="510.33333333333326" width="363" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="채널 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2D-nH-Llx">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="70"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWH-0a-DWz">
+                                        <rect key="frame" x="263" y="0.0" width="100" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="ryR-Nq-0Da"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="구독하기">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="9Vm-q0-Oqz"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NNZ-nh-dJt" firstAttribute="top" secondItem="0tz-9e-5EN" secondAttribute="bottom" constant="20" id="4nh-sw-5Wr"/>
-                            <constraint firstItem="NNZ-nh-dJt" firstAttribute="leading" secondItem="I4b-mT-lQ4" secondAttribute="leading" constant="20" id="6jX-OS-WlP"/>
-                            <constraint firstItem="yPr-Sy-aBn" firstAttribute="top" secondItem="I4b-mT-lQ4" secondAttribute="topMargin" constant="-7" id="IhU-pL-RlM"/>
-                            <constraint firstAttribute="trailing" secondItem="yPr-Sy-aBn" secondAttribute="trailing" id="UGW-tP-4Pj"/>
-                            <constraint firstItem="yPr-Sy-aBn" firstAttribute="leading" secondItem="I4b-mT-lQ4" secondAttribute="leading" id="gVa-xi-fOj"/>
-                            <constraint firstItem="C9L-N2-e5x" firstAttribute="top" secondItem="yPr-Sy-aBn" secondAttribute="bottom" id="hcS-jb-zIO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="me8-lu-eF0" secondAttribute="trailing" id="5La-MV-1KE"/>
+                            <constraint firstItem="ApK-T9-xaS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="6wI-Db-71B"/>
+                            <constraint firstItem="rnS-bh-hUW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="68" id="915-eR-BkH"/>
+                            <constraint firstItem="6tR-7g-Ecw" firstAttribute="top" secondItem="me8-lu-eF0" secondAttribute="bottom" constant="15" id="FJ3-uY-Nql"/>
+                            <constraint firstItem="Hwb-x3-0Es" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="21" id="IXC-lV-S2i"/>
+                            <constraint firstItem="Hwb-x3-0Es" firstAttribute="top" secondItem="6tR-7g-Ecw" secondAttribute="bottom" constant="15" id="JKl-eW-ego"/>
+                            <constraint firstItem="eR9-1I-crH" firstAttribute="top" secondItem="Hwb-x3-0Es" secondAttribute="bottom" constant="13.333333333333314" id="Q4d-zX-hRi"/>
+                            <constraint firstItem="me8-lu-eF0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ro9-bf-JyA"/>
+                            <constraint firstItem="me8-lu-eF0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Wgg-4U-sTI"/>
+                            <constraint firstItem="eR9-1I-crH" firstAttribute="bottom" secondItem="rnS-bh-hUW" secondAttribute="bottom" id="ZLG-vz-3BU"/>
+                            <constraint firstItem="6tR-7g-Ecw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="j5z-iU-Hxd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ApK-T9-xaS" secondAttribute="trailing" constant="15" id="jbK-Ip-nwq"/>
+                            <constraint firstItem="eR9-1I-crH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="rd4-fA-JgX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eR9-1I-crH" secondAttribute="trailing" constant="320" id="scD-XZ-TTH"/>
+                            <constraint firstItem="ApK-T9-xaS" firstAttribute="top" secondItem="rnS-bh-hUW" secondAttribute="bottom" constant="15" id="zEj-Ym-JyK"/>
                         </constraints>
                     </view>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="DetailPageTableView" destination="yPr-Sy-aBn" id="58k-LB-Xxk"/>
-                        <outlet property="TableView" destination="yPr-Sy-aBn" id="Oy9-Ue-T7M"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="83.206106870229007" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
-        <image name="minimize" width="20" height="10"/>
-        <image name="thumbDown" width="25" height="25"/>
-        <image name="thumbUp" width="25" height="25"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="hand.thumbsdown.fill" catalog="system" width="128" height="121"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

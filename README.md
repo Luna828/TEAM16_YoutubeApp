@@ -135,8 +135,6 @@
 <br/>
 
 ## 팀 규칙
-<br />
-<br />
 1. 아래의 Git Convention 지켜서 commit과 PR 요청하기! <br />
 git commit -m "[FEAT] : ⚙️ commit init" <br />
 2. 스크럼: 오전 9시 30분 <br />
@@ -147,5 +145,11 @@ git commit -m "[FEAT] : ⚙️ commit init" <br />
 
 ## 앱 시현 영상
 
+
+
+
 ## 프로젝트 주요 기능
+
+
+
 

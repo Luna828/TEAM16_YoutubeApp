@@ -1,6 +1,6 @@
 import UIKit
 
-final class YoutubePage: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+final class YoutubePage: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     private var thumbnailList: Thumbnails?
     private let manager = YoutubeApiManager.shared
 
@@ -75,5 +75,21 @@ final class YoutubePage: UIViewController, UICollectionViewDelegate, UICollectio
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 8
+    }
+}
+
+extension YoutubePage: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let selectedVideo = thumbnailList?.items[indexPath.row].snippet.thumbnails.high.url //"https://i.ytimg.com/vi/cRe9KMvYfWU/mqdefault.jpg"
+        
+        
+        if let videoId = selectedVideo?.getVideoID() {
+            let detailPage = DetailPageViewController(videoId: videoId)
+            navigationController?.pushViewController(detailPage, animated: true)
+        } else {
+            print("Video가 없습니다")
+        }
+        
     }
 }

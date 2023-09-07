@@ -1,37 +1,39 @@
 import UIKit
 import WebKit
 
-class DetailPageViewController: UIViewController{
+class DetailPageViewController: UIViewController {
     var webView = WKWebView()
-    
-    
+    var videoId: String?
+
+    init(videoId: String?) {
+        super.init(nibName: nil, bundle: nil)
+        self.videoId = videoId
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     override func loadView() {
-            let webConfiguration = WKWebViewConfiguration()
-            webView = WKWebView(frame: .zero, configuration: webConfiguration)
-            view = webView
-            
-            // ios 16.4 에서 DEBUG 모드인 경우에만
-            // webview inspector 가능하도록 설정
-            if #available(iOS 16.4, *) {
-                #if DEBUG
-                webView.isInspectable = true  // webview inspector 가능하도록 설정
-                #endif
-            }
-            
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        view = webView
+    }
+
+    override func viewDidLoad() {
+        loadView()
+
+        guard let VIDEO_ID = videoId else {
+            print("없는 URL 입니다")
+            return
         }
-        
-        
-        override func viewDidLoad() {
-            print("WebViewController >> viewDidLoad ")
-            loadUrl("https://eunoia3jy.tistory.com/")
-        }
-        
-        
-        func loadUrl(_ url: String) {
-            let myURL = URL(string: url)
-             let myRequest = URLRequest(url: myURL!)
-             webView.load(myRequest) // 웹뷰 load
-        }
+        // loadUrl("https://m.youtube.com/watch?v=DFHrowAl1Hw")
+        loadUrl("https://youtu.be/\(VIDEO_ID)")
+    }
+
+    func loadUrl(_ url: String) {
+        let myURL = URL(string: url)
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
+    }
 }
-
-

@@ -98,22 +98,24 @@
 - Pull Requests는 `Commit Message`와 동일하게 써서 올립니다.
 
 ## 와이어 프레임
-- 로그인 페이지
+- 로그인 페이지 <br/>
 <img width="300" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/19a0a0d3-ff13-488a-b314-5a053bead9e6">
 <img width="300" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/66a66cac-41a3-489d-84b8-55968b94eccc">
-1. User Default 사용
-2. 회원가입
-- 성은 빼고 이름만 작성
-- 이메일 입력란
-- 비밀번호 입력 + 재확인 입력
-- 다음 버튼 → 회원가입완료 버튼으로 변경
+<br/>
+1. User Default 사용 <br/>
+2. 회원가입 <br/>
+- 성은 빼고 이름만 작성 <br/>
+- 이메일 입력란 <br/>
+- 비밀번호 입력 + 재확인 입력 <br/>
+- 다음 버튼 → 회원가입완료 버튼으로 변경 <br/>
 3. 아래의 사진은 언제든지 변경가능하며, UI 디자인 참고안입니다!
+<br/>
+<br/>
 
-
-- 마이 페이지
-<img width="300" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/68632327-1a06-4c21-aefa-bace9bbfbcf7">
-1. 로그아웃 버튼 클릭 시 로그인 화면으로 이동 기능 구현
-2. 영상 시청 시 기록에 추가되는 기능 구현
+- 마이 페이지 <br/>
+<img width="300" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/68632327-1a06-4c21-aefa-bace9bbfbcf7"> <br/>
+1. 로그아웃 버튼 클릭 시 로그인 화면으로 이동 기능 구현 <br/>
+2. 영상 시청 시 기록에 추가되는 기능 구현 <br/>
 
   
 

@@ -108,7 +108,9 @@
 - 다음 버튼 → 회원가입완료 버튼으로 변경
   
 3. 아래의 사진은 언제든지 변경가능하며, UI 디자인 참고안입니다!
- <img width="416" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/19a0a0d3-ff13-488a-b314-5a053bead9e6">
+ <img width="300" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/19a0a0d3-ff13-488a-b314-5a053bead9e6">
+<img width="300" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/66a66cac-41a3-489d-84b8-55968b94eccc">
+
   
 
 

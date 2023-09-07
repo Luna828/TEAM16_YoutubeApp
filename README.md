@@ -99,8 +99,8 @@
 
 ## 와이어 프레임
 - 로그인 페이지  <br />
-<img width="300" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/19a0a0d3-ff13-488a-b314-5a053bead9e6">
-<img width="300" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/66a66cac-41a3-489d-84b8-55968b94eccc">
+<img width="280" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/19a0a0d3-ff13-488a-b314-5a053bead9e6">
+<img width="280" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/66a66cac-41a3-489d-84b8-55968b94eccc">
  <br />
 1. User Default 사용  <br />
 2. 회원가입 <br />
@@ -113,18 +113,22 @@
   <br />
 
 - 마이 페이지  <br />
-<img width="300" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/68632327-1a06-4c21-aefa-bace9bbfbcf7">  <br />
+<img width="280" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/68632327-1a06-4c21-aefa-bace9bbfbcf7">  <br />
 1. 로그아웃 버튼 클릭 시 로그인 화면으로 이동 기능 구현 <br/>
 2. 영상 시청 시 기록에 추가되는 기능 구현 <br/>
 <br/>
 
 - 메인 페이지 <br/>
-<img width="282" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/14b592ee-1563-46ac-84c5-8b5501ae633d"> <br />
+<img width="280" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/14b592ee-1563-46ac-84c5-8b5501ae633d"> <br />
 <br />
-1. 아래 프로필 버튼 누르면 마이페이지로 이동
-2. + 버튼 누르면 영상 업로드 기능 구현 
-3. 로그인 전제 조건 하에 라이브러리에 좋아요한 영상 모아놓기 기능 구현(후순위)
-4. 메인페이지 하단부에 쇼츠 말고 다른 영상들이 나타날 수도 있음(TBD)
+1. 아래 프로필 버튼 누르면 마이페이지로 이동 <br />
+2. + 버튼 누르면 영상 업로드 기능 구현  <br />
+3. 로그인 전제 조건 하에 라이브러리에 좋아요한 영상 모아놓기 기능 구현(후순위) <br />
+4. 메인페이지 하단부에 쇼츠 말고 다른 영상들이 나타날 수도 있음(TBD) <br />
+
+- 디테일 페이지 <br />
+<img width="500" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/e45abe0a-6e3a-4913-b85e-4d1d83b6d10d">
+
 
   
 

@@ -8,6 +8,8 @@
 import UIKit
 
 final class MainPageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    private let headerView: MainPageHeaderView = .init(frame: .zero)
     private var thumbnailList: Thumbnails?
     private let manager = YoutubeApiManager.shared
 
@@ -55,6 +57,15 @@ final class MainPageViewController: UIViewController, UICollectionViewDelegate, 
                 }
             }
         }
+        // HeaderView 테스트코드
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        view.addSubview(headerView)
+//        NSLayoutConstraint.activate([
+//          headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+//          headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//          headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//          headerView.heightAnchor.constraint(equalToConstant: 100)
+//        ])
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

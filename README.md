@@ -134,11 +134,20 @@
 <br/>
 <br/>
 
-
-  
-
-
 ## 팀 규칙
+<br />
+<br />
+```swift
+1. 아래의 Git Convention 지켜서 commit과 PR 요청하기! 
+git commit -m "[FEAT] : ⚙️ commit init"
+
+2. 스크럼: 오전 9시 30분
+3. Pull Request: 오후 8시
+
+4. 자리비울 때 말하기 (개인사정)
+5. 이슈 트랙킹/트러블슈팅시 질문하기
+```
+
 
 ## 앱 시현 영상
 

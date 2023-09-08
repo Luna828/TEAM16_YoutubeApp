@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		671151942AA8ADAA0099C40B /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671151932AA8ADAA0099C40B /* Secrets.swift */; };
 		4C1814AA2AA9D6930026ADD3 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1814A92AA9D6930026ADD3 /* Secrets.swift */; };
 		4C1814AC2AA9DAA00026ADD3 /* MainPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1814AB2AA9DAA00026ADD3 /* MainPageCell.swift */; };
 		4C1814AE2AA9DCBE0026ADD3 /* MainPageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1814AD2AA9DCBE0026ADD3 /* MainPageHeaderView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		671151932AA8ADAA0099C40B /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		4C1814A92AA9D6930026ADD3 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		4C1814AB2AA9DAA00026ADD3 /* MainPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageCell.swift; sourceTree = "<group>"; };
 		4C1814AD2AA9DCBE0026ADD3 /* MainPageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageHeaderView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		FB6F8C032AA85E5B001EAEBB /* YoutubePage */ = {
 			isa = PBXGroup;
 			children = (
+				671151932AA8ADAA0099C40B /* Secrets.swift */,
 				FB6F8C042AA85E84001EAEBB /* YoutubePage.storyboard */,
 				FB6F8C062AA85E9D001EAEBB /* YoutubePage.swift */,
 				FB6F8C082AA86EE3001EAEBB /* YoutubeCell.swift */,
@@ -312,6 +315,7 @@
 				FBC0CF662AA57471006E3197 /* DetailPageViewController.swift in Sources */,
 				FBBFD5332AA56D9F00F3757C /* SceneDelegate.swift in Sources */,
 				FB6FCB932AA5E2900099DA49 /* Color+Extension.swift in Sources */,
+				671151942AA8ADAA0099C40B /* Secrets.swift in Sources */,
 				4C1814AA2AA9D6930026ADD3 /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

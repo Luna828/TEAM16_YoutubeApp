@@ -16,7 +16,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xe-9D-u4e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3448" y="-461"/>
+            <point key="canvasLocation" x="3476" y="-401"/>
         </scene>
         <!--ProfilePage-->
         <scene sceneID="s0d-6b-0kx">
@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="P21-cn-5Mh">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headerCell" rowHeight="97" id="ueH-EN-Iiv" customClass="HeaderTableViewCell" customModule="YoutubeCloneApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="97"/>
@@ -163,7 +163,9 @@
                             <constraint firstItem="P21-cn-5Mh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="x3h-e8-8QV"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="ProfilePage" image="person" catalog="system" id="DMz-ST-t7X"/>
                     <navigationItem key="navigationItem" id="MVD-N3-UGS"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="P21-cn-5Mh" id="i8I-Lg-CH1"/>
                         <segue destination="EiW-5F-lmH" kind="show" identifier="goEdit" id="D2W-Er-ZSh"/>
@@ -226,6 +228,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

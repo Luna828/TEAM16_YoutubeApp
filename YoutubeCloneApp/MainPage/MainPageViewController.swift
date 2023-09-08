@@ -64,7 +64,7 @@ final class MainPageViewController: UIViewController, UICollectionViewDelegate, 
 //          headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
 //          headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 //          headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//          headerView.heightAnchor.constraint(equalToConstant: 100)
+//          headerView.heightAnchor.constraint(equalToConstant: 10)
 //        ])
     }
 

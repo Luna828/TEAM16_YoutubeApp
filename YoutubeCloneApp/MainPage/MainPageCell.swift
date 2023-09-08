@@ -29,7 +29,7 @@ final class MainPageCell: UICollectionViewCell {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 15, weight: .semibold)
+        label.font = .systemFont(ofSize: 20, weight: .semibold)
         label.textColor = .label
         label.textAlignment = .left
         return label

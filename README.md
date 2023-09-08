@@ -1,4 +1,4 @@
-#TEAM16: YOUTUBE Clone APP PROJECT
+# TEAM16: YOUTUBE Clone APP PROJECT
 > 앱 숙련 주차 팀 프로젝트 16조입니다
 >
 > 저희 팀은 YOUTUBE앱 만들기를 선택하여 진행하기로 하였습니다.
@@ -167,8 +167,96 @@
 <br />
 <br />
 
-## 앱 시현 영상
+## 앱 시현 화면
+<table>
+  <tbody>
+    <tr>
+     <td align="center" valign="top" width="14.28%">
+    <image width=200 height=400 alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/b938e85b-ea99-415d-bb3b-68ac0e0ded67">
+       <br />
+         <sub>
+           <b>로그인 페이지</b>
+         </sub>
+       </a>
+       <br />
+      </td>
+      <td align="center" valign="top" width="14.28%">
+    <img  width=200 height=400 alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/138e4e32-b07f-4e2a-aaca-4128eed2dc73">
+       <br />
+         <sub>
+           <b>회원가입 페이지</b>
+         </sub>
+        </a>
+       <br />
+      </td>
+      <td align="center" valign="top" width="14.28%">
+    <img  width=200 height=400 alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/323d90bd-9c6b-4c43-92bc-855e6002e05c">
+       <br />
+         <sub>
+           <b>메인 페이지 1</b>
+         </sub>
+        </a>
+       <br />
+      </td>
+      <td align="center" valign="top" width="14.28%">
+    <img  width=200 height=400 alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/18e4cb59-cb74-47b1-beb2-878c2512ef20">
+       <br />
+         <sub>
+           <b>메인 페이지 2</b>
+         </sub>
+        </a>
+       <br />
+      </td>
+          </sub>
+        </a>
+       <br />
+      </td>      
+  </td>
+  </tbody>
+</table>
 
+      
+<table>
+  <tbody>
+    </tr>
+      <td align="center" valign="top" width="14.28%">
+    <img  width=200 height=400 alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/6e4197b7-8892-40a7-a101-e34b2c2fc4db">
+       <br />
+         <sub>
+           <b>디테일 페이지</b>
+         </sub>
+        </a>
+       <br />
+      </td>
+      <td align="center" valign="top" width="14.28%">
+    <img  width=200 height=400 alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/f890a344-df7c-4e1a-91a5-d16d325da9c5">
+       <br />
+         <sub>
+           <b>마이 페이지</b>
+         </sub>
+        </a>
+       <br />
+      </td>
+      <td align="center" valign="top" width="14.28%">
+    <img width=200 height=400 alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/e58edf86-98f7-4840-966c-96b96bfa1842">
+       <br />
+         <sub>
+           <b>프로필 변경 페이지</b>
+         </sub>
+        </a>
+       <br />
+      </td>
+      <td align="center" valign="top" width="14.28%">
+    <img width=200 height=400 alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/42904bcc-52a5-49f5-85b2-f0666b07adf9">
+       <br />
+         <sub>
+           <b>로그아웃 버튼 활성화</b>
+         </sub>
+        </a>
+       <br />
+      </td>
+  </tbody>
+</table>
 
 <br />
 <br />

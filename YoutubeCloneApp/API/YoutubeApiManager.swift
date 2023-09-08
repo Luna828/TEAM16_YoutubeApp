@@ -14,8 +14,8 @@ final class YoutubeApiManager {
 
     let BASE_URL = "https://youtube.googleapis.com/youtube/v3/search"
 
-    func fetchVideo(completion: @escaping (Thumbnails?) -> Void) {
-        let urlString = "\(BASE_URL)?part=snippet&type=video&key=\(LUNA_KEY)"
+    func fetchVideo(page: Int, maxResults: Int, completion: @escaping (Thumbnails?) -> Void) {
+        let urlString = "\(BASE_URL)?part=snippet&type=video&page=\(page)&maxResults=\(maxResults)&key=\(LUNA_KEY)"
         
         request(with: urlString) { thumbnails in
             completion(thumbnails)

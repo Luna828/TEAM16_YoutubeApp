@@ -81,6 +81,7 @@ final class YoutubePage: UIViewController, UICollectionViewDelegate, UICollectio
 extension YoutubePage: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        //url
         let selectedVideo = thumbnailList?.items[indexPath.row].snippet.thumbnails.high.url //"https://i.ytimg.com/vi/cRe9KMvYfWU/mqdefault.jpg"
         
         

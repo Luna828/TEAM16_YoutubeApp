@@ -131,6 +131,14 @@
 			path = YoutubePage;
 			sourceTree = "<group>";
 		};
+		FB8FBE012AA9E6FF0038092E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FBC9AF202AA6C244000F25F0 /* String +.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		FBBFD5242AA56D9F00F3757C = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +159,7 @@
 		FBBFD52F2AA56D9F00F3757C /* YoutubeCloneApp */ = {
 			isa = PBXGroup;
 			children = (
+				FB8FBE012AA9E6FF0038092E /* Extension */,
 				FB6F8C032AA85E5B001EAEBB /* YoutubePage */,
 				FB6F8BFB2AA81528001EAEBB /* API */,
 				67EE45F92AA6DFAD00CFD729 /* Model */,
@@ -211,7 +220,6 @@
 				FBC0CF6D2AA5782F006E3197 /* LoginPage.storyboard */,
 				FBC0CF6F2AA57839006E3197 /* LoginPage.swift */,
 				FB6FCB942AA623720099DA49 /* RegisterPage.swift */,
-				FBC9AF202AA6C244000F25F0 /* String +.swift */,
 			);
 			path = LoginPage;
 			sourceTree = "<group>";

@@ -14,7 +14,7 @@ final class YoutubeCell: UICollectionViewCell {
     
     private lazy var channelTitle: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 15, weight: .semibold)
+        label.font = .systemFont(ofSize: 15, weight: .bold)
         label.textColor = .label
         label.textAlignment = .center
         return label

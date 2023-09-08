@@ -17,7 +17,7 @@ extension String {
         return passwordValidation.evaluate(with: self)
     }
     
-    // @와2글자 이상 확인
+    // @와2글자 이상 확인 1@naver.com
     func isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)

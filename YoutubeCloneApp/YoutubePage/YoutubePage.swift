@@ -79,6 +79,7 @@ final class YoutubePage: UIViewController, UICollectionViewDelegate, UICollectio
 }
 
 extension YoutubePage: UICollectionViewDataSource {
+    //cell을 클릭했을 때 작동함수
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         //url
@@ -87,6 +88,8 @@ extension YoutubePage: UICollectionViewDataSource {
         
         if let videoId = selectedVideo?.getVideoID() {
             let detailPage = DetailPageViewController(videoId: videoId)
+            //화면전환 코드 (YOUTUBEPage -> DetailPage)
+            //stack view (push, pop)
             navigationController?.pushViewController(detailPage, animated: true)
         } else {
             print("Video가 없습니다")

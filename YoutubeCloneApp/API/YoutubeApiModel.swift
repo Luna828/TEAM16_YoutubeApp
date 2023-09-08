@@ -30,7 +30,7 @@ struct Thumbnails: Codable {
     }
 
     struct Thumbnails: Codable {
-        let url: String
+        let url: String //www.youtube.watch?/KeWqs.jpg
         let width: Int
         let height: Int
     }

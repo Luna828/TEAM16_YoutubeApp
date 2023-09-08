@@ -103,8 +103,8 @@
 
 #### 로그인 페이지
 <br />
-<img width="280" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/19a0a0d3-ff13-488a-b314-5a053bead9e6">
 <img width="280" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/66a66cac-41a3-489d-84b8-55968b94eccc">
+<img width="280" height ="500" alt="image" src="https://github.com/Leehan-sol/TEAM16_YoutubeApp/assets/139109343/138e4e32-b07f-4e2a-aaca-4128eed2dc73">
 <br />
 
 > 1. User Default 사용

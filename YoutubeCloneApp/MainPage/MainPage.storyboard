@@ -14,19 +14,6 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-CB-Pnl">
-                                <rect key="frame" x="0.0" y="59" width="393" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem image="ON" id="Bjv-UI-sFK"/>
-                                    <tabBarItem title="" image="airplayvideo" catalog="system" id="O8x-sb-chU"/>
-                                    <tabBarItem title="Notice" image="bell" catalog="system" id="8Br-9g-9g1"/>
-                                    <tabBarItem title="ProfilePage" image="person.crop.circle" catalog="system" id="6AS-m3-lJx"/>
-                                </items>
-                            </tabBar>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -39,10 +26,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ON" width="85" height="18.666666030883789"/>
-        <image name="airplayvideo" catalog="system" width="128" height="97"/>
-        <image name="bell" catalog="system" width="125" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
     </resources>
 </document>

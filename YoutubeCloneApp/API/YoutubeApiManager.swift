@@ -16,10 +16,18 @@ final class YoutubeApiManager {
 
     func fetchVideo(completion: @escaping (Thumbnails?) -> Void) {
         let urlString = "\(BASE_URL)?part=snippet&type=video&key=\(LUNA_KEY)"
-
+        
         request(with: urlString) { thumbnails in
             completion(thumbnails)
         }
+    }
+        
+        func fetchVideo2(completion: @escaping (Thumbnails?) -> Void) {
+            let urlString2 = "\(BASE_URL)?part=snippet&order=viewCount&type=video&key=\(LUNA_KEY)"
+
+            request(with: urlString2) { thumbnails in
+                completion(thumbnails)
+            }
     }
 
     func request(with urlString: String, completion: @escaping (Thumbnails?) -> Void) {
